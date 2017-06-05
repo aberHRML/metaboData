@@ -5,7 +5,9 @@
 #' availableDataSets()
 #' 
 #' ## Can be run to access individual file paths
-#' list.files(system.file('DataSets/FIE-HRMS/BdistachyonEcotypes',package = 'metaboData'),full.names = TRUE)
+#' list.files(system.file('DataSets/FIE-HRMS/BdistachyonEcotypes',
+#'                         package = 'metaboData'),
+#'            full.names = TRUE)
 
 availableDataSets <- function(){
    dirs <- list.dirs(system.file('DataSets',package = 'metaboData'),recursive = F)
