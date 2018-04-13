@@ -1,7 +1,7 @@
 Package: metaboData
 Type: Package
 Title: Example Metabolomics Data Sets
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Jasem", "Finch", email = "jsf9@aber.ac.uk", role = c("aut", "cre"))
 Description: Example metabolomics data sets.
 Depends: R (>= 3.4.0)
