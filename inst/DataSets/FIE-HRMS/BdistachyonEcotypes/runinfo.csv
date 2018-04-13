@@ -1,4 +1,4 @@
-fileOrder,injOrder,fileName,batch,batchBlock,name,class
+fileOrder,injOrder,fileName,batch,block,name,class
 1,40,10.mzML,1,3,ABR1_10,ABR1
 2,52,11.mzML,1,4,ABR1_11,ABR1
 3,67,12.mzML,1,5,ABR1_12,ABR1
