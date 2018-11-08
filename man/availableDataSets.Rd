@@ -7,13 +7,8 @@
 availableDataSets()
 }
 \description{
-Displays file paths for available data sets.
+Displays available data sets.
 }
 \examples{
 availableDataSets()
-
-## Can be run to access individual file paths
-list.files(system.file('DataSets/FIE-HRMS/BdistachyonEcotypes',
-                        package = 'metaboData'),
-           full.names = TRUE)
 }
