@@ -47,3 +47,5 @@ files <- filePaths(
 length(files)
 #> [1] 69
 ```
+
+The `abr1` FIE-MS data set is included from the [FIEmspro](https://github.com/aberHRML/FIEmspro) package.
