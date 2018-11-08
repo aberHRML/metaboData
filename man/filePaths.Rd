@@ -7,9 +7,9 @@
 filePaths(technique, dataSet)
 }
 \arguments{
-\item{technique}{metabolomic technique}
+\item{technique}{metabolomic technique name}
 
-\item{dataSet}{data set}
+\item{dataSet}{data set name}
 }
 \description{
 Return a vector of file paths for a given data set of a given metabolomic technique.

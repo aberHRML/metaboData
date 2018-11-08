@@ -39,7 +39,7 @@ Available data sets for a given metabolomic technique can be returned using:
 dataSets(techniques()[1])
 ```
 
-File paths for files within a given data set can be returned using:
+File paths for data files within a given data set can be returned using:
 
 ```{r}
 files <- filePaths(
@@ -47,6 +47,16 @@ files <- filePaths(
     dataSets(techniques()[1])[1])
 
 length(files)
+```
+
+Run information can be retrieved for a given experiment of a given metabolomic technique using:
+
+```{r}
+info <- runinfo(
+    techniques()[1],
+    dataSets(techniques()[1])[1])
+
+head(info)
 ```
 
 The `abr1` FIE-MS data set is included from the [FIEmspro](https://github.com/aberHRML/FIEmspro) package. 

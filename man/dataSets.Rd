@@ -7,7 +7,7 @@
 dataSets(technique)
 }
 \arguments{
-\item{technique}{metabolomic technique}
+\item{technique}{metabolomic technique name}
 }
 \description{
 Return a vector of available data sets for a given metabolomic technique.
