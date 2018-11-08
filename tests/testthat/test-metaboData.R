@@ -26,5 +26,15 @@ test_that('file paths are returned',{
     files <- filePaths(techniques()[1],dataSets(techniques()[1])[1])
     
     expect_true(is.character(files))
-    expect_true(length(files) == 69)
+    expect_true(length(files) == 68)
+})
+
+test_that('run information is read correctly',{
+    info <- runinfo(
+        techniques()[1],
+        dataSets(techniques()[1])[1])
+    
+    expect_true(identical(class(info),c("tbl_df","tbl","data.frame")))
+    expect_true(nrow(info) == 68)
+    expect_true(ncol(info) == 7)
 })
