@@ -2,7 +2,7 @@
 metaboData
 ==========
 
-[![Travis build status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData)
+[![Travis build status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData) [![Coverage status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master)
 
 An R package containing example data sets for metabolomics analyses
 
