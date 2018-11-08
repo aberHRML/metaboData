@@ -1,7 +1,7 @@
 #' @importFrom stringr str_c
 #' @export
 
-files <- function(technique,dataSet){
+filePaths <- function(technique,dataSet){
     list.files(system.file(str_c('DataSets',technique,dataSet,sep = '/'),package = 'metaboData'),full.names = T)
 }
 

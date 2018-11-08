@@ -2,7 +2,7 @@
 
 export(availableDataSets)
 export(dataSets)
-export(files)
+export(filePaths)
 export(techniques)
 importFrom(magrittr,"%>%")
 importFrom(purrr,map_chr)
