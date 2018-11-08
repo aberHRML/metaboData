@@ -23,14 +23,14 @@ availableDataSets()
 #>   - BdistachyonEcotypes
 ```
 
-Available techniques can be returned using:
+Available metabolomic techniques can be returned using:
 
 ``` r
 techniques()
 #> [1] "FIE-HRMS"
 ```
 
-Available data sets for a given technique can be returned using:
+Available data sets for a given metabolomic technique can be returned using:
 
 ``` r
 dataSets(techniques()[1])
