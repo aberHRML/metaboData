@@ -1,6 +1,12 @@
+---
+output: github_document
+---
 
-metaboData
-==========
+```{r, echo = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+# metaboData
 
 [![Travis build status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData)
 
@@ -8,42 +14,36 @@ An R package containing example data sets for metabolomics analyses
 
 To install this repository run:
 
-``` {r,eval=false)
+```{r,eval=FALSE)
 remotes::install_github('aberHRML/metaboData')
 ```
 
 Available data sets can be viewed using:
 
-``` r
+```{r}
 library(metaboData)
 
 availableDataSets()
-#> 
-#>  FIE-HRMS
-#>   - BdistachyonEcotypes
 ```
 
 Available techniques can be returned using:
 
-``` r
+```{r}
 techniques()
-#> [1] "FIE-HRMS"
 ```
 
 Available data sets for a given technique can be returned using:
 
-``` r
+```{r}
 dataSets(techniques()[1])
-#> [1] "BdistachyonEcotypes"
 ```
 
 File paths for files within a given data set can be returned using:
 
-``` r
+```{r}
 files <- filePaths(
     techniques()[1],
     dataSets(techniques()[1])[1])
 
 length(files)
-#> [1] 69
 ```
