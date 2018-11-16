@@ -50,3 +50,18 @@ dataSets <- function(technique){
                 .[length(.)]  
         })
 }
+
+#' description
+#' @description Return list containing experiment description elements
+#' @param technique metabolomic technique name
+#' @param dataSet data set name
+#' @examples 
+#' experimentDescription <- description(
+#'    techniques()[1],
+#'    dataSets(techniques()[1])[1])
+#' @importFrom yaml read_yaml 
+#' @export
+
+description <- function(technique,dataSet){
+   read_yaml(system.file(str_c('DataSets',technique,dataSet,'description.yml',sep = '/'),package = 'metaboData')) 
+}

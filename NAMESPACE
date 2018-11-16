@@ -2,6 +2,7 @@
 
 export(availableDataSets)
 export(dataSets)
+export(description)
 export(filePaths)
 export(runinfo)
 export(techniques)
@@ -11,3 +12,4 @@ importFrom(readr,read_csv)
 importFrom(stringr,str_c)
 importFrom(stringr,str_detect)
 importFrom(stringr,str_split)
+importFrom(yaml,read_yaml)
