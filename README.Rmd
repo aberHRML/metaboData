@@ -49,6 +49,16 @@ files <- filePaths(
 length(files)
 ```
 
+An experimental description can be retrieved for a given experiment of a given metabolomic technique using:
+
+```{r}
+experimentDescription <- description(
+   techniques()[1],
+   dataSets(techniques()[1])[1])
+
+str(experimentDescription)
+```
+
 Run information can be retrieved for a given experiment of a given metabolomic technique using:
 
 ```{r}

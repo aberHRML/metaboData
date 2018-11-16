@@ -48,6 +48,25 @@ length(files)
 #> [1] 68
 ```
 
+An experimental description can be retrieved for a given experiment of a given metabolomic technique using:
+
+``` r
+experimentDescription <- description(
+   techniques()[1],
+   dataSets(techniques()[1])[1])
+
+str(experimentDescription)
+#> List of 8
+#>  $ Name             : chr "BdistachyonEcotypes"
+#>  $ Technique        : chr "Flow-infusion electrospray ionisation-high resolution mass spectrometry (FIE-HRMS)"
+#>  $ Organism         : chr "Brachypodium distachyon"
+#>  $ Tissue           : chr "leaf"
+#>  $ Description      : chr "Comparison of leaf tissue from 4 B. distachyon ecotypes."
+#>  $ Sample_collection: chr "B. distachyon plants were grown to 21 days old. The middle 4cm section of the 3rd leaf from the base of the pla"| __truncated__
+#>  $ Extracion        : chr "Samples were milled for 30 seconds at 30Hz whilst frozen then 700ul extraction solvent added (chloroform:methan"| __truncated__
+#>  $ MS_analysis      : chr "A QC sample was prepared by taking an equal volume from each sample. Samples were run in a randomised block ord"| __truncated__
+```
+
 Run information can be retrieved for a given experiment of a given metabolomic technique using:
 
 ``` r
