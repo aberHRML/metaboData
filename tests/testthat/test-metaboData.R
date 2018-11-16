@@ -38,3 +38,12 @@ test_that('run information is read correctly',{
     expect_true(nrow(info) == 68)
     expect_true(ncol(info) == 7)
 })
+
+test_that('description is returned',{
+    experimentDescription <- description(
+        techniques()[1],
+        dataSets(techniques()[1])[1])
+    
+    expect_true(class(experimentDescription) == 'list')
+    expect_true(length(experimentDescription) == 8)
+})
