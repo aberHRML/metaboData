@@ -2,7 +2,7 @@
 metaboData
 ==========
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![Travis build status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData) [![Coverage status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master) ![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg) [![CRAN status](https://www.r-pkg.org/badges/version/metaboData)](https://cran.r-project.org/package=metaboData) ![downloads](https://cranlogs.r-pkg.org/badges/metaboData)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![Travis build status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData) [![Coverage status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master) ![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
 An R package containing example data sets for metabolomics analyses
 
