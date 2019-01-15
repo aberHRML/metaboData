@@ -5,7 +5,7 @@ test_that('available data sets displayed',{
     out <- capture.output(availableDataSets())
     
     expect_true(is.character(out))
-    expect_true(length(out) == 4)
+    expect_true(length(out) == 6)
 })
 
 test_that('techinques are returned',{
