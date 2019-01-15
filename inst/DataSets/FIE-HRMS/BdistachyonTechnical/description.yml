@@ -1,0 +1,8 @@
+Name: BdistachyonTechnical
+Technique: Flow-infusion electrospray ionisation-high resolution mass spectrometry (FIE-HRMS)
+Organism: Brachypodium distachyon
+Tissue: leaf
+Description: 10 technical injections of leaf tissue from B. distachyon ecotype ABR1.
+Sample_collection: B. distachyon plants were grown to 21 days old. The middle 4cm section of the 3rd leaf from the base of two plants was detached, placed in an Eppendorf tube and snap frozen in liquid nitrogen.  
+Extracion: Sampled leaf tissue was milled for 30 seconds at 30Hz whilst frozen then 1.4ml extraction solvent added (chloroform:methanol:water; 1:2.5:1; v:v:v). This was then vortexed, shaken for 20 minutes at 1400 rpm and 0C, vortexed again and then centrifuged for 6 minutes at 13000 rpm at 0C. The supernatant was then transferred to a fresh eppendorf.
+MS_analysis: FIE-HRMS analysis was performed using an Exactive Orbitrap mass spectrometer with 20ul injected into a solvent flow. Data acquisition took place for 3 minutes with both positive and negative ionisation modes acquired simultaneously scanning from 55-1000 m/z.

@@ -1,7 +1,7 @@
 Package: metaboData
 Type: Package
 Title: Example Metabolomics Data Sets
-Version: 0.2.3
+Version: 0.3.0
 Authors@R: person("Jasen", "Finch", email = "jsf9@aber.ac.uk", role = c("aut", "cre"))
 Description: Example metabolomics data sets.
 Depends: R (>= 3.4.0)
@@ -17,6 +17,10 @@ LazyData: true
 RoxygenNote: 6.1.1
 Suggests: 
     testthat,
-    covr
+    covr,
+    knitr,
+    rmarkdown,
+    prettydoc
 URL: https://github.com/aberHRML/metaboData
 BugReports: https://github.com/aberHRML/metaboData/issues
+VignetteBuilder: knitr

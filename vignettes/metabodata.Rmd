@@ -1,31 +1,39 @@
 ---
-output: github_document
+title: "Using metaboData"
+author: "Jasen Finch"
+date: "`r Sys.Date()`"
+output: 
+    prettydoc::html_pretty:
+        toc: true
+        highlight: github
+        theme: tactile
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
-```{r, echo = FALSE}
-knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
 ```
 
-# metaboData
+## Introduction
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
-[![Travis build status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData)
-[![Coverage status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master)
-![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
+metaboData provides raw and processed example metabolomics data sets.
+This document concisely outlines how to access the data sets and the meta information provided. 
 
-An R package containing example data sets for metabolomics analyses.
+## Installation using aberhrml *drat* repository
 
-To install directly from this repository run:
+The package can be installed within R directly from a drat repository hosted via github using:
 
-```{r,eval=FALSE)
-remotes::install_github('aberHRML/metaboData',build_opts =c("--no-resave-data", "--no-manual"))
-```
-
-Or package can be installed via a drat repository hosted on github using:
-
-```{rm,eval=FALSE}
+```{r,eval=FALSE}
 install.packages('metaboData',repos = 'https://aberhrml.github.io/drat/')
 ```
+
+## Accessing data sets
 
 Available data sets can be viewed using:
 
