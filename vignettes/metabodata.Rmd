@@ -1,0 +1,88 @@
+---
+title: "Using metaboData"
+author: "Jasen Finch"
+date: "`r Sys.Date()`"
+output: 
+    prettydoc::html_pretty:
+        toc: true
+        highlight: github
+        theme: tactile
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+metaboData provides raw and processed example metabolomics data sets.
+This document concisely outlines how to access the data sets and the meta information provided. 
+
+## Installation using aberhrml *drat* repository
+
+The package can be installed within R directly from a drat repository hosted via github using:
+
+```{r,eval=FALSE}
+install.packages('metaboData',repos = 'https://aberhrml.github.io/drat/')
+```
+
+## Accessing data sets
+
+Available data sets can be viewed using:
+
+```{r}
+library(metaboData)
+
+availableDataSets()
+```
+
+Available metabolomic techniques can be returned using:
+
+```{r}
+techniques()
+```
+
+Available data sets for a given metabolomic technique can be returned using:
+
+```{r}
+dataSets(techniques()[1])
+```
+
+File paths for data files within a given data set can be returned using:
+
+```{r}
+files <- filePaths(
+    techniques()[1],
+    dataSets(techniques()[1])[1])
+
+length(files)
+```
+
+An experimental description can be retrieved for a given experiment of a given metabolomic technique using:
+
+```{r}
+experimentDescription <- description(
+   techniques()[1],
+   dataSets(techniques()[1])[1])
+
+str(experimentDescription)
+```
+
+Run information can be retrieved for a given experiment of a given metabolomic technique using:
+
+```{r}
+info <- runinfo(
+    techniques()[1],
+    dataSets(techniques()[1])[1])
+
+head(info)
+```
+
+The `abr1` FIE-MS data set is included from the [FIEmspro](https://github.com/aberHRML/FIEmspro) package. 
