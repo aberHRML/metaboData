@@ -26,7 +26,9 @@ library(metaboData)
 availableDataSets()
 #> 
 #>  FIE-HRMS
-#>   - BdistachyonEcotypes BdistachyonTechnical UrineTechnical
+#>      - BdistachyonEcotypes
+#>  - BdistachyonTechnical
+#>  - UrineTechnical
 ```
 
 Available metabolomic techniques can be returned using:

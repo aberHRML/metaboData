@@ -12,7 +12,7 @@ availableDataSets <- function(){
        cat('\n',tech[[1]][length(tech[[1]])])
        dataSets <- basename(list.dirs(.,recursive = F)) %>%
            map_chr(~{str_c('\t- ',.)}) %>%
-           str_c(.,collapse = '\n\n')
-       cat('\n',dataSets)
+           str_c(.,collapse = '\n')
+       cat('\n',dataSets,'\n\n')
    })
 }
