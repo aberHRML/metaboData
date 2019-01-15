@@ -4,12 +4,18 @@ metaboData
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![Travis build status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData) [![Coverage status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master) ![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
-An R package containing example data sets for metabolomics analyses
+An R package containing example data sets for metabolomics analyses.
 
-To install this repository run:
+To install directly from this repository run:
 
 ``` {r,eval=false)
-remotes::install_github('aberHRML/metaboData')
+remotes::install_github('aberHRML/metaboData',build_opts =c("--no-resave-data", "--no-manual"))
+```
+
+Or package can be installed via a drat repository hosted on github using:
+
+``` rm
+install.packages('metaboData',repos = 'https://aberhrml.github.io/drat/')
 ```
 
 Available data sets can be viewed using:
@@ -20,7 +26,7 @@ library(metaboData)
 availableDataSets()
 #> 
 #>  FIE-HRMS
-#>   - BdistachyonEcotypes
+#>   - BdistachyonEcotypes BdistachyonTechnical UrineTechnical
 ```
 
 Available metabolomic techniques can be returned using:
@@ -34,7 +40,7 @@ Available data sets for a given metabolomic technique can be returned using:
 
 ``` r
 dataSets(techniques()[1])
-#> [1] "BdistachyonEcotypes"
+#> [1] "BdistachyonEcotypes"  "BdistachyonTechnical" "UrineTechnical"
 ```
 
 File paths for data files within a given data set can be returned using:
@@ -75,25 +81,25 @@ info <- runinfo(
     dataSets(techniques()[1])[1])
 #> Parsed with column specification:
 #> cols(
-#>   fileOrder = col_integer(),
-#>   injOrder = col_integer(),
+#>   fileOrder = col_double(),
+#>   injOrder = col_double(),
 #>   fileName = col_character(),
-#>   batch = col_integer(),
-#>   block = col_integer(),
+#>   batch = col_double(),
+#>   block = col_double(),
 #>   name = col_character(),
 #>   class = col_character()
 #> )
 
 head(info)
 #> # A tibble: 6 x 7
-#>   fileOrder injOrder fileName batch block name    class
-#>       <int>    <int> <chr>    <int> <int> <chr>   <chr>
-#> 1         1       40 10.mzML      1     3 ABR1_10 ABR1 
-#> 2         2       52 11.mzML      1     4 ABR1_11 ABR1 
-#> 3         3       67 12.mzML      1     5 ABR1_12 ABR1 
-#> 4         4       32 13.mzML      1     3 ABR1_13 ABR1 
-#> 5         5       53 14.mzML      1     4 ABR1_14 ABR1 
-#> 6         6        4 15.mzML      1     1 ABR1_15 ABR1
+#>   fileOrder injOrder fileName   batch block name    class
+#>       <dbl>    <dbl> <chr>      <dbl> <dbl> <chr>   <chr>
+#> 1         1       64 1.mzML.gz      1     5 ABR1_1  ABR1 
+#> 2         2       40 10.mzML.gz     1     3 ABR1_10 ABR1 
+#> 3         3       52 11.mzML.gz     1     4 ABR1_11 ABR1 
+#> 4         4       67 12.mzML.gz     1     5 ABR1_12 ABR1 
+#> 5         5       32 13.mzML.gz     1     3 ABR1_13 ABR1 
+#> 6         6       53 14.mzML.gz     1     4 ABR1_14 ABR1
 ```
 
 The `abr1` FIE-MS data set is included from the [FIEmspro](https://github.com/aberHRML/FIEmspro) package.
