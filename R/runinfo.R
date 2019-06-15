@@ -14,5 +14,6 @@
 runinfo <- function(technique,dataSet){
     list.files(system.file(str_c('DataSets',technique,dataSet,sep = '/'),package = 'metaboData'),full.names = T) %>%
         .[str_detect(.,'.csv')] %>%
-        read_csv()
+        read_csv() %>%
+        .[]
 }
