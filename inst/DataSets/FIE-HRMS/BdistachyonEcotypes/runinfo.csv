@@ -62,8 +62,8 @@ fileOrder,injOrder,fileName,batch,block,name,class
 61,1,QC01.mzML.gz,1,0,QC01,QC
 62,2,QC02.mzML.gz,1,0,QC02,QC
 63,3,QC03.mzML.gz,1,0,QC03,QC
-64,16,QC04.mzML.gz,1,0,QC04,QC
-65,29,QC05.mzML.gz,1,0,QC05,QC
-66,42,QC06.mzML.gz,1,0,QC06,QC
-67,55,QC07.mzML.gz,1,0,QC07,QC
-68,68,QC08.mzML.gz,1,0,QC08,QC
+64,16,QC04.mzML.gz,1,1,QC04,QC
+65,29,QC05.mzML.gz,1,2,QC05,QC
+66,42,QC06.mzML.gz,1,3,QC06,QC
+67,55,QC07.mzML.gz,1,4,QC07,QC
+68,68,QC08.mzML.gz,1,5,QC08,QC
