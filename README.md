@@ -6,6 +6,8 @@ state and is being actively
 developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 [![Travis build
 status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/aberHRML/metaboData?branch=master&svg=true)](https://ci.appveyor.com/project/aberHRML/metaboData)
 [![Coverage
 status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master)
 ![License: GPL
