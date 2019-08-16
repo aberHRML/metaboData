@@ -34,7 +34,7 @@ test_that('run information is read correctly',{
         techniques()[1],
         dataSets(techniques()[1])[1])
     
-    expect_true(identical(class(info),c("spec_tbl_df","tbl_df","tbl","data.frame")))
+    expect_true(identical(class(info),c("tbl_df","tbl","data.frame")))
     expect_true(nrow(info) == 68)
     expect_true(ncol(info) == 7)
 })
