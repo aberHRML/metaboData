@@ -4,9 +4,11 @@ context('metaboData')
 test_that('available data sets displayed',{
     out <- capture.output(availableDataSets())
     
+    skip_on_covr()
     expect_true(is.character(out))
     expect_true(length(out) == 6)
-})
+})    
+
 
 test_that('techinques are returned',{
     tech <- techniques()
