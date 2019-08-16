@@ -1,18 +1,27 @@
 
-metaboData
-==========
+# metaboData
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![Travis build status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData) [![Coverage status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master) ![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
+[![Project Status: Active - The project has reached a stable, usable
+state and is being actively
+developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+[![Travis build
+status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData)
+[![Coverage
+status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master)
+![License: GPL
+v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
 An R package containing example data sets for metabolomics analyses.
 
-To install directly from this repository run:
+To install directly from this repository
+run:
 
 ``` {r,eval=false)
 remotes::install_github('aberHRML/metaboData',build_opts =c("--no-resave-data", "--no-manual"))
 ```
 
-Or package can be installed via a drat repository hosted on github using:
+Or package can be installed via a drat repository hosted on github
+using:
 
 ``` rm
 install.packages('metaboData',repos = 'https://aberhrml.github.io/drat/')
@@ -38,7 +47,8 @@ techniques()
 #> [1] "FIE-HRMS"
 ```
 
-Available data sets for a given metabolomic technique can be returned using:
+Available data sets for a given metabolomic technique can be returned
+using:
 
 ``` r
 dataSets(techniques()[1])
@@ -56,7 +66,8 @@ length(files)
 #> [1] 68
 ```
 
-An experimental description can be retrieved for a given experiment of a given metabolomic technique using:
+An experimental description can be retrieved for a given experiment of a
+given metabolomic technique using:
 
 ``` r
 experimentDescription <- description(
@@ -75,22 +86,13 @@ str(experimentDescription)
 #>  $ MS_analysis      : chr "A QC sample was prepared by taking an equal volume from each sample. Samples were run in a randomised block ord"| __truncated__
 ```
 
-Run information can be retrieved for a given experiment of a given metabolomic technique using:
+Run information can be retrieved for a given experiment of a given
+metabolomic technique using:
 
 ``` r
 info <- runinfo(
     techniques()[1],
     dataSets(techniques()[1])[1])
-#> Parsed with column specification:
-#> cols(
-#>   fileOrder = col_double(),
-#>   injOrder = col_double(),
-#>   fileName = col_character(),
-#>   batch = col_double(),
-#>   block = col_double(),
-#>   name = col_character(),
-#>   class = col_character()
-#> )
 
 head(info)
 #> # A tibble: 6 x 7
@@ -104,4 +106,5 @@ head(info)
 #> 6         6       53 14.mzML.gz     1     4 ABR1_14 ABR1
 ```
 
-The `abr1` FIE-MS data set is included from the [FIEmspro](https://github.com/aberHRML/FIEmspro) package.
+The `abr1` FIE-MS data set is included from the
+[FIEmspro](https://github.com/aberHRML/FIEmspro) package.
