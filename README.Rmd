@@ -19,7 +19,7 @@ An R package containing example data sets for metabolomics analyses.
 To install directly from this repository run:
 
 ```{r,eval=FALSE)
-remotes::install_github('aberHRML/metaboData',build_opts =c("--no-resave-data", "--no-manual"))
+devtools::install_github('aberHRML/metaboData',build_vignettes = TRUE)
 ```
 
 Or package can be installed via a drat repository hosted on github using:
