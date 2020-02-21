@@ -6,7 +6,7 @@ test_that('available data sets displayed',{
     
     skip_on_covr()
     expect_true(is.character(out))
-    expect_true(length(out) == 6)
+    expect_true(length(out) == 8)
 })    
 
 
@@ -21,7 +21,7 @@ test_that('data sets are returned',{
     sets <- dataSets(techniques()[1])
     
     expect_true(is.character(sets))
-    expect_true(length(sets) == 3)
+    expect_true(length(sets) == 5)
 })
 
 test_that('file paths are returned',{
