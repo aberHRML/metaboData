@@ -1,8 +1,0 @@
-Name: UrineTechnical
-Technique: Flow-infusion electrospray ionisation-high resolution mass spectrometry (FIE-HRMS)
-Organism: Homo sapiens
-Tissue: Urine
-Description: 10 technical injections of human urine.
-Sample_collection:   
-Extracion: 
-MS_analysis: FIE-HRMS analysis was performed using an Exactive Orbitrap mass spectrometer with 20ul injected into a solvent flow. Data acquisition took place for 3 minutes with both positive and negative ionisation modes acquired simultaneously scanning from 55-1000 m/z.

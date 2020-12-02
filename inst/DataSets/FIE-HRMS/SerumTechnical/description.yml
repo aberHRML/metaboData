@@ -1,8 +1,0 @@
-Name: SerumTechnical
-Technique: Flow-infusion electrospray ionisation-high resolution mass spectrometry (FIE-HRMS)
-Organism: Equus ferus caballus
-Tissue: Serum
-Description: 10 technical injections of horse serum.
-Sample_collection:   
-Extracion: 
-MS_analysis: FIE-HRMS analysis was performed using an Exactive Orbitrap mass spectrometer with 20ul injected into a solvent flow. Data acquisition took place for 3 minutes with both positive and negative ionisation modes acquired simultaneously with two scanning events from 55-280 and 270-1200 m/z.
