@@ -2,11 +2,9 @@
 context('metaboData')
 
 test_that('available data sets displayed',{
-    out <- capture.output(availableDataSets())
+    out <- availableDataSets()
     
-    skip_on_covr()
-    expect_true(is.character(out))
-    expect_length(out,8)
+    expect_s3_class(out,'tbl_df')
 })    
 
 
@@ -52,4 +50,10 @@ test_that('description is returned',{
     
     expect_equal(class(experimentDescription),'list')
     expect_length(experimentDescription,8)
+})
+
+test_that('available data sets displayed once downloaded',{
+    out <- availableDataSets()
+    
+    expect_s3_class(out,'tbl_df')
 })
