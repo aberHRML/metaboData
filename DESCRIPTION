@@ -7,6 +7,7 @@ Description: Example metabolomics data sets.
 Depends: R (>= 3.4.0)
 Imports: 
     dplyr,
+    fs,
     magrittr,
     piggyback,
     purrr,
