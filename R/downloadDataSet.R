@@ -52,6 +52,9 @@ downloadDataSet <- function(technique,
         data_set_directory <- dataDirectory(dataSetDir,internalDir)
         
         pb_download(tag = release_tag,
-                    dest = data_set_directory)
+                    dest = str_c(data_set_directory,
+                                 technique,
+                                 dataSet,
+                                 sep = '/'))
     }
 }

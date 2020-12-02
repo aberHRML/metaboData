@@ -4,12 +4,18 @@
 \alias{filePaths}
 \title{filePaths}
 \usage{
-filePaths(technique, dataSet)
+filePaths(technique, dataSet, dataSetDir = "DataSets", internalDir = TRUE, ...)
 }
 \arguments{
 \item{technique}{metabolomic technique name}
 
 \item{dataSet}{data set name}
+
+\item{dataSetDir}{directory to store local data sets. If \code{internalDir = TRUE} this is a directory relative to the library location.}
+
+\item{internalDir}{Logical, should the directory for storing local data sets be internal to the package location.}
+
+\item{...}{arguments to pass to \code{downloadDataSet()}}
 }
 \description{
 Return a vector of file paths for a given data set of a given metabolomic technique.

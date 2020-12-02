@@ -2,6 +2,9 @@
 #' @description Return tibble of run information for a given data set of a given metabolomics technique.
 #' @param technique metabolomic technique name
 #' @param dataSet data set name
+#' @param dataSetDir directory to store local data sets. If \code{internalDir = TRUE} this is a directory relative to the library location.
+#' @param internalDir Logical, should the directory for storing local data sets be internal to the package location.
+#' @param  ... arguments to pass to \code{downloadDataSet()}
 #' @examples
 #' info <- runinfo(
 #'    techniques()[1],
@@ -11,9 +14,22 @@
 #' @importFrom readr read_csv
 #' @export
 
-runinfo <- function(technique,dataSet){
-    list.files(system.file(str_c('DataSets',technique,dataSet,sep = '/'),package = 'metaboData'),full.names = T) %>%
+runinfo <- function(technique,
+                    dataSet,
+                    dataSetDir = 'DataSets',
+                    internalDir = TRUE,
+                    ...){
+    if (!dataSetAvailableLocal(technique,dataSet,dataSetDir,internalDir)) {
+        downloadDataSet(technique,dataSet,dataSetDir,internalDir,...)
+    }
+    
+    data_directory <- dataDirectory(dataSetDir,internalDir)
+    
+    data_directory %>%
+        str_c(technique,dataSet,sep = '/') %>%
+        dir_ls() %>%
         .[str_detect(.,'.csv')] %>%
-        {suppressMessages(read_csv(.))} %>%
-        .[]
+        {
+            suppressMessages(read_csv(.))   
+        }
 }

@@ -4,11 +4,11 @@
 #' @param internalDir Logical, are local data sets stored internal to the package location.
 #' @return A tibble containing available data set information.
 #' @importFrom purrr walk map
-#' @importFrom stringr str_split_fixed str_extract regex str_remove_all
+#' @importFrom stringr str_extract regex str_remove_all
 #' @importFrom tibble as_tibble tibble
 #' @importFrom magrittr set_colnames set_names
 #' @importFrom fs dir_ls dir_exists
-#' @importFrom dplyr bind_rows mutate select left_join
+#' @importFrom dplyr bind_rows mutate select left_join distinct
 #' @export
 #' @examples 
 #' availableDataSets()
@@ -18,11 +18,9 @@ availableDataSets <- function(dataSetDir = 'DataSets',
    
    remote_data <- remoteData(remote_repository)
    
-   remote_data_sets <- remote_data$tag %>%
-      unique() %>%
-      str_split_fixed('_',2) %>%
-      as_tibble(.name_repair = 'minimal') %>%
-      set_colnames(c('technique','data set'))
+   remote_data_sets <- remote_data %>%
+      select(technique,`data set`) %>%
+      distinct()
    
    remote_data_files <- remote_data %>%
       split(.$tag) %>%

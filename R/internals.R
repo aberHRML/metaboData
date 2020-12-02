@@ -7,7 +7,11 @@ remote_repository <- 'aberHRML/metaboData'
 remoteData <- function(remote_repository){
     pb_list(repo = remote_repository) %>%
         as_tibble() %>%
-        mutate(size = fs_bytes(size))
+        mutate(size = fs_bytes(size),
+               technique = str_extract(tag,regex('.*_')) %>%
+                   str_remove_all('_'),
+               `data set` = str_extract(tag,regex('_.*')) %>%
+                   str_remove_all('_'))
 }
 
 dataDirectory <- function(dataSetDir,internalDir){
@@ -31,4 +35,10 @@ dataSetAvailable <- function(technique,dataSet){
     } else {
         TRUE
     }
+}
+
+dataSetAvailableLocal <- function(technique,dataSet,dataSetDir,internalDir){
+    data_directory <- dataDirectory(dataSetDir,internalDir)
+    
+    dir_exists(str_c(data_directory,technique,dataSet,sep = '/'))
 }
