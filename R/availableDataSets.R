@@ -4,7 +4,6 @@
 #' @param internalDir Logical, are local data sets stored internal to the package location.
 #' @return A tibble containing available data set information.
 #' @importFrom purrr walk map
-#' @importFrom piggyback pb_list
 #' @importFrom stringr str_split_fixed str_extract regex str_remove_all
 #' @importFrom tibble as_tibble tibble
 #' @importFrom magrittr set_colnames set_names
@@ -17,7 +16,7 @@
 availableDataSets <- function(dataSetDir = 'DataSets',
                               internalDir = TRUE){
    
-   remote_data <- pb_list(repo = remote_repository)
+   remote_data <- remoteData(remote_repository)
    
    remote_data_sets <- remote_data$tag %>%
       unique() %>%
@@ -29,12 +28,8 @@ availableDataSets <- function(dataSetDir = 'DataSets',
       split(.$tag) %>%
       map(~{.$file_name})
    
-   if (isTRUE(internalDir)){
-      data_set_directory <- system.file(package = 'metaboData') %>%
-         str_c('/',dataSetDir)
-   } else {
-      data_set_directory <- dataSetDir
-   }
+   data_set_directory <- dataDirectory(dataSet,
+                                       internalDir)
    
    if (dir_exists(data_set_directory)){
       local_techniques <- dir_ls(data_set_directory)
