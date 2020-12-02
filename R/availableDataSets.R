@@ -26,7 +26,7 @@ availableDataSets <- function(dataSetDir = 'DataSets',
       split(.$tag) %>%
       map(~{.$file_name})
    
-   data_set_directory <- dataDirectory(dataSet,
+   data_set_directory <- dataDirectory(dataSetDir,
                                        internalDir)
    
    if (dir_exists(data_set_directory)){

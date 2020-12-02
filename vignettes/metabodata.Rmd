@@ -16,7 +16,8 @@ vignette: >
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  eval = FALSE
 )
 ```
 
@@ -29,40 +30,53 @@ This document concisely outlines how to access the data sets and the meta inform
 
 The package can be installed within R directly from a drat repository hosted via github using:
 
-```{r,eval=FALSE}
+```{r}
 install.packages('metaboData',repos = 'https://aberhrml.github.io/drat/')
 ```
 
 ## Accessing data sets
 
-Available data sets can be viewed using:
+Load the library:
 
 ```{r}
 library(metaboData)
+```
 
+The example data sets are remotely via the GitHub repository.
+The available data sets can be viewed using:
+
+```{r}
 availableDataSets()
 ```
 
-Available metabolomic techniques can be returned using:
+The available metabolomic techniques can be returned using:
 
 ```{r}
 techniques()
 ```
 
-Available data sets for a given metabolomic technique can be returned using:
+The available data sets for a given metabolomic technique can be returned using:
 
 ```{r}
 dataSets(techniques()[1])
 ```
 
-File paths for data files within a given data set can be returned using:
+A particular data set can be downloaded for use with:
+
+```{r}
+downloadDataSet(techniques()[1],
+                dataSets()[1])
+```
+
+By default these will be stored within the library location.
+This behaviour can be adjusted using the `dataSetDir` and `internalDir` arguments.
+
+File paths for data files within a given data set can be returned using the following:
 
 ```{r}
 files <- filePaths(
     techniques()[1],
     dataSets(techniques()[1])[1])
-
-length(files)
 ```
 
 An experimental description can be retrieved for a given experiment of a given metabolomic technique using:
@@ -85,4 +99,7 @@ info <- runinfo(
 head(info)
 ```
 
-The `abr1` FIE-MS data set is included from the [FIEmspro](https://github.com/aberHRML/FIEmspro) package. 
+For `filePaths`, `description` and `runinfo`, if the specified data set is not available locally, by default the user will be prompted to consent to downloading the data.
+The `ask = FALSE` argument can be used to override this behavior. 
+
+The `abr1` FIE-MS data set from the [FIEmspro](https://github.com/aberHRML/FIEmspro) package is also available via lazy-load. 
