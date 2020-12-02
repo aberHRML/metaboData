@@ -1,25 +1,24 @@
 
 # metaboData
 
-[![Project Status: Active - The project has reached a stable, usable
-state and is being actively
-developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
-[![Travis build
-status](https://travis-ci.org/aberHRML/metaboData.svg?branch=master)](https://travis-ci.org/aberHRML/metaboData)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/aberHRML/metaboData?branch=master&svg=true)](https://ci.appveyor.com/project/aberHRML/metaboData)
+<!-- badges: start -->
+
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![R build
+status](https://github.com/aberHRML/metaboData/workflows/R-CMD-check/badge.svg)](https://github.com/aberHRML/metaboData/actions)
 [![Coverage
 status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master)
 ![License: GPL
 v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
+<!-- badges: end -->
 
 An R package containing example data sets for metabolomics analyses.
 
-To install directly from this repository
-run:
+To install directly from this repository run:
 
 ``` {r,eval=false)
-remotes::install_github('aberHRML/metaboData',build_opts =c("--no-resave-data", "--no-manual"))
+devtools::install_github('aberHRML/metaboData',build_vignettes = TRUE)
 ```
 
 Or package can be installed via a drat repository hosted on github
@@ -39,6 +38,8 @@ availableDataSets()
 #>  FIE-HRMS
 #>      - BdistachyonEcotypes
 #>  - BdistachyonTechnical
+#>  - PlasmaTechnical
+#>  - SerumTechnical
 #>  - UrineTechnical
 ```
 
@@ -54,7 +55,8 @@ using:
 
 ``` r
 dataSets(techniques()[1])
-#> [1] "BdistachyonEcotypes"  "BdistachyonTechnical" "UrineTechnical"
+#> [1] "BdistachyonEcotypes"  "BdistachyonTechnical" "PlasmaTechnical"     
+#> [4] "SerumTechnical"       "UrineTechnical"
 ```
 
 File paths for data files within a given data set can be returned using:
