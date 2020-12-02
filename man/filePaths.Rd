@@ -21,9 +21,11 @@ filePaths(technique, dataSet, dataSetDir = "DataSets", internalDir = TRUE, ...)
 Return a vector of file paths for a given data set of a given metabolomic technique.
 }
 \examples{
+\dontrun{
 files <- filePaths(
    techniques()[1],
    dataSets(techniques()[1])[1])
 
 head(files)
+}
 }

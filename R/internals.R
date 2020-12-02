@@ -25,7 +25,7 @@ dataDirectory <- function(dataSetDir,internalDir){
     return(data_set_directory)
 }
 
-dataSetAvailable <- function(technique,dataSet){
+dataSetAvailable <- function(technique,dataSet,dataSetDir,internalDir){
     available_data_sets <- availableDataSets(dataSetDir = dataSetDir,
                                              internalDir = internalDir)
     

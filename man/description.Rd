@@ -27,7 +27,9 @@ description(
 Return list containing experiment description elements
 }
 \examples{
+\dontrun{
 experimentDescription <- description(
    techniques()[1],
    dataSets(techniques()[1])[1])
+}
 }

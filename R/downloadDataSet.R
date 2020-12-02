@@ -8,6 +8,7 @@
 #' @importFrom rlang is_interactive inform
 #' @importFrom dplyr group_by summarise filter
 #' @importFrom piggyback pb_download
+#' @importFrom utils menu
 #' @export
 
 downloadDataSet <- function(technique,
@@ -16,13 +17,13 @@ downloadDataSet <- function(technique,
                             internalDir = TRUE,
                             ask = TRUE){
     
-    if (!is_interactive()){
+    if ((!is_interactive()) & isTRUE(ask)){
         stop('Session is non-interactive and user input is required. Use "ask = FALSE" to override this.',
              call. = FALSE)
     }
     
     
-    data_set_available <- dataSetAvailable(technique,dataSet)
+    data_set_available <- dataSetAvailable(technique,dataSet,dataSetDir,internalDir)
     
     if (isFALSE(data_set_available)){
         stop('Data set not available. Use "availableDataSets()" to find available data sets.',call. = FALSE)
@@ -51,7 +52,8 @@ downloadDataSet <- function(technique,
         
         data_set_directory <- dataDirectory(dataSetDir,internalDir)
         
-        pb_download(tag = release_tag,
+        pb_download(repo = remote_repository,
+                    tag = release_tag,
                     dest = str_c(data_set_directory,
                                  technique,
                                  dataSet,

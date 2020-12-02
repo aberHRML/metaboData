@@ -6,11 +6,13 @@
 #' @param internalDir Logical, should the directory for storing local data sets be internal to the package location.
 #' @param  ... arguments to pass to \code{downloadDataSet()}
 #' @examples 
+#' \dontrun{
 #' files <- filePaths(
 #'    techniques()[1],
 #'    dataSets(techniques()[1])[1])
 #' 
 #' head(files)
+#' }
 #' @importFrom stringr str_c str_detect
 #' @export
 
@@ -76,9 +78,11 @@ dataSets <- function(technique){
 #' @param internalDir Logical, should the directory for storing local data sets be internal to the package location.
 #' @param  ... arguments to pass to \code{downloadDataSet()}
 #' @examples 
+#' \dontrun{
 #' experimentDescription <- description(
 #'    techniques()[1],
 #'    dataSets(techniques()[1])[1])
+#' }
 #' @importFrom yaml read_yaml 
 #' @export
 

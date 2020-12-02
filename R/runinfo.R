@@ -6,11 +6,13 @@
 #' @param internalDir Logical, should the directory for storing local data sets be internal to the package location.
 #' @param  ... arguments to pass to \code{downloadDataSet()}
 #' @examples
+#' \dontrun{
 #' info <- runinfo(
 #'    techniques()[1],
 #'    dataSets(techniques()[1])[1])
 #' 
 #' head(info)
+#' }
 #' @importFrom readr read_csv
 #' @export
 
