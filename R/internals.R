@@ -20,3 +20,15 @@ dataDirectory <- function(dataSetDir,internalDir){
     
     return(data_set_directory)
 }
+
+dataSetAvailable <- function(technique,dataSet){
+    available_data_sets <- availableDataSets(dataSetDir = dataSetDir,
+                                             internalDir = internalDir)
+    
+    if (!(technique %in% available_data_sets$technique) | 
+        !(dataSet %in% available_data_sets$`data set`)){
+       FALSE
+    } else {
+        TRUE
+    }
+}

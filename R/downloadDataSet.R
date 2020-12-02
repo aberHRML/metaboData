@@ -21,11 +21,10 @@ downloadDataSet <- function(technique,
              call. = FALSE)
     }
     
-    available_data_sets <- availableDataSets(dataSetDir = dataSetDir,
-                                             internalDir = internalDir)
     
-    if (!(technique %in% available_data_sets$technique) | 
-        !(dataSet %in% available_data_sets$`data set`)){
+    data_set_available <- dataSetAvailable(technique,dataSet)
+    
+    if (isFALSE(data_set_available)){
         stop('Data set not available. Use "availableDataSets()" to find available data sets.',call. = FALSE)
     }
     
