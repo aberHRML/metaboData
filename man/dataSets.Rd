@@ -2,12 +2,15 @@
 % Please edit documentation in R/files.R
 \name{dataSets}
 \alias{dataSets}
-\title{dataSets}
+\title{Available data sets for a given technique}
 \usage{
 dataSets(technique)
 }
 \arguments{
 \item{technique}{metabolomic technique name}
+}
+\value{
+A character vector of available data sets.
 }
 \description{
 Return a vector of available data sets for a given metabolomic technique.

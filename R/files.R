@@ -1,10 +1,11 @@
-#' filePaths
+#' Data set file paths
 #' @description Return a vector of file paths for a given data set of a given metabolomic technique.
 #' @param technique metabolomic technique name
 #' @param dataSet data set name
 #' @param dataSetDir directory to store local data sets. If \code{internalDir = TRUE} this is a directory relative to the library location.
 #' @param internalDir Logical, should the directory for storing local data sets be internal to the package location.
 #' @param  ... arguments to pass to \code{downloadDataSet()}
+#' @return A character vector of file paths.
 #' @examples 
 #' \dontrun{
 #' files <- filePaths(
@@ -31,8 +32,9 @@ filePaths <- function(technique,
     dir_ls(str_c(data_directory,technique,dataSet,sep = '/'))
 }
 
-#' techniques
+#' Available data set techniques
 #' @description Return a vector of available metabolomic techniques.
+#' @return A character vector of available techniques.
 #' @examples 
 #' techniques()
 #' @importFrom magrittr %>%
@@ -47,9 +49,10 @@ techniques <- function(){
     unique(remote_data$technique)
 }
 
-#' dataSets
+#' Available data sets for a given technique
 #' @description Return a vector of available data sets for a given metabolomic technique.
 #' @param technique metabolomic technique name
+#' @return A character vector of available data sets.
 #' @examples 
 #' dataSets(techniques()[1])
 #' @importFrom tibble deframe
@@ -70,16 +73,17 @@ dataSets <- function(technique){
         deframe()
 }
 
-#' description
+#' Data set description
 #' @description Return list containing experiment description elements
 #' @param technique metabolomic technique name
 #' @param dataSet data set name
 #' @param dataSetDir directory to store local data sets. If \code{internalDir = TRUE} this is a directory relative to the library location.
 #' @param internalDir Logical, should the directory for storing local data sets be internal to the package location.
 #' @param  ... arguments to pass to \code{downloadDataSet()}
+#' @return A list containing data set descriptors.
 #' @examples 
 #' \dontrun{
-#' experimentDescription <- description(
+#' description(
 #'    techniques()[1],
 #'    dataSets(techniques()[1])[1])
 #' }

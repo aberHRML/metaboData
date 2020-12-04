@@ -2,9 +2,12 @@
 % Please edit documentation in R/files.R
 \name{techniques}
 \alias{techniques}
-\title{techniques}
+\title{Available data set techniques}
 \usage{
 techniques()
+}
+\value{
+A character vector of available techniques.
 }
 \description{
 Return a vector of available metabolomic techniques.

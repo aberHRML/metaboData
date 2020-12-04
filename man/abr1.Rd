@@ -4,7 +4,7 @@
 \name{abr1}
 \alias{abr1}
 \alias{FIEmspro}
-\title{abr1 dataset}
+\title{The abr1 dataset}
 \source{
 The FIEmspro package \url{https://github.com/aberHRML/FIEmspro}
 }

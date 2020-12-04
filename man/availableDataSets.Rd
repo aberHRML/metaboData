@@ -2,7 +2,7 @@
 % Please edit documentation in R/availableDataSets.R
 \name{availableDataSets}
 \alias{availableDataSets}
-\title{availableDataSets}
+\title{Available data sets}
 \usage{
 availableDataSets(dataSetDir = "DataSets", internalDir = TRUE)
 }

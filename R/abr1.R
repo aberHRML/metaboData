@@ -1,4 +1,4 @@
-#' abr1 dataset
+#' The abr1 dataset
 #' 
 #' Real world FIE-MS dataset.
 #' 

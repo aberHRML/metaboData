@@ -2,7 +2,7 @@
 % Please edit documentation in R/runinfo.R
 \name{runinfo}
 \alias{runinfo}
-\title{runinfo}
+\title{Data set sample information}
 \usage{
 runinfo(technique, dataSet, dataSetDir = "DataSets", internalDir = TRUE, ...)
 }
@@ -16,6 +16,9 @@ runinfo(technique, dataSet, dataSetDir = "DataSets", internalDir = TRUE, ...)
 \item{internalDir}{Logical, should the directory for storing local data sets be internal to the package location.}
 
 \item{...}{arguments to pass to \code{downloadDataSet()}}
+}
+\value{
+A tibble containing sample information.
 }
 \description{
 Return tibble of run information for a given data set of a given metabolomics technique.

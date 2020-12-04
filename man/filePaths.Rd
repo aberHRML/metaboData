@@ -2,7 +2,7 @@
 % Please edit documentation in R/files.R
 \name{filePaths}
 \alias{filePaths}
-\title{filePaths}
+\title{Data set file paths}
 \usage{
 filePaths(technique, dataSet, dataSetDir = "DataSets", internalDir = TRUE, ...)
 }
@@ -16,6 +16,9 @@ filePaths(technique, dataSet, dataSetDir = "DataSets", internalDir = TRUE, ...)
 \item{internalDir}{Logical, should the directory for storing local data sets be internal to the package location.}
 
 \item{...}{arguments to pass to \code{downloadDataSet()}}
+}
+\value{
+A character vector of file paths.
 }
 \description{
 Return a vector of file paths for a given data set of a given metabolomic technique.

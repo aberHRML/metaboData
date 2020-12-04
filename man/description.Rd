@@ -2,7 +2,7 @@
 % Please edit documentation in R/files.R
 \name{description}
 \alias{description}
-\title{description}
+\title{Data set description}
 \usage{
 description(
   technique,
@@ -23,12 +23,15 @@ description(
 
 \item{...}{arguments to pass to \code{downloadDataSet()}}
 }
+\value{
+A list containing data set descriptors.
+}
 \description{
 Return list containing experiment description elements
 }
 \examples{
 \dontrun{
-experimentDescription <- description(
+description(
    techniques()[1],
    dataSets(techniques()[1])[1])
 }

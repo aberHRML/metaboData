@@ -1,4 +1,4 @@
-#' availableDataSets
+#' Available data sets
 #' @description Displays available data sets.
 #' @param dataSetDir directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the library location.
 #' @param internalDir Logical, are local data sets stored internal to the package location.

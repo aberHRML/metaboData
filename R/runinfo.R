@@ -1,10 +1,11 @@
-#' runinfo
+#' Data set sample information
 #' @description Return tibble of run information for a given data set of a given metabolomics technique.
 #' @param technique metabolomic technique name
 #' @param dataSet data set name
 #' @param dataSetDir directory to store local data sets. If \code{internalDir = TRUE} this is a directory relative to the library location.
 #' @param internalDir Logical, should the directory for storing local data sets be internal to the package location.
 #' @param  ... arguments to pass to \code{downloadDataSet()}
+#' @return A tibble containing sample information.
 #' @examples
 #' \dontrun{
 #' info <- runinfo(
