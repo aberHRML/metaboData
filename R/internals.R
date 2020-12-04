@@ -7,6 +7,7 @@ remote_repository <- 'aberHRML/metaboData'
 remoteData <- function(remote_repository){
     pb_list(repo = remote_repository) %>%
         as_tibble() %>%
+        filter(!str_detect(tag,regex('(v[0-9]+[.][0-9]+[.][0-9]+)'))) %>%
         mutate(size = fs_bytes(size),
                technique = str_extract(tag,regex('.*_')) %>%
                    str_remove_all('_'),
