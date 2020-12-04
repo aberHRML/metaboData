@@ -34,12 +34,12 @@ downloadDataSet <- function(technique,
     remote_data <- remoteData(remote_repository)
 
     data_set_size <- remote_data %>%
-        group_by(tag) %>%
-        summarise(size = sum(size),.groups = 'drop') %>%
-        filter(tag == release_tag)
+        filter(tag == release_tag) %>%
+        .$size %>%
+        sum()
 
     message(technique,' ',dataSet)
-    message('size: ',data_set_size$size)
+    message('size: ',data_set_size)
     
     download <- 1
     
