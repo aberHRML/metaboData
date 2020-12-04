@@ -66,8 +66,10 @@ dataSets <- function(technique){
     
     remote_data <- remoteData(remote_repository)
     
+    selected_technique <- technique
+    
     remote_data %>%
-        filter(technique == technique) %>%
+        filter(technique == selected_technique) %>%
         select(`data set`) %>%
         distinct() %>%
         deframe()
