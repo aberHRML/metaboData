@@ -12,19 +12,19 @@ test_that('techinques are returned',{
     tech <- techniques()
     
     expect_true(is.character(tech))
-    expect_length(tech,1)
+    expect_length(tech,2)
 })
 
 test_that('data sets are returned',{
-    sets <- dataSets(techniques()[1])
+    sets <- dataSets('FIE-HRMS')
     
     expect_true(is.character(sets))
     expect_length(sets,5)
 })
 
 test_that('file paths are returned',{
-    files <- filePaths(techniques()[1],
-                       dataSets(techniques()[1])[1],
+    files <- filePaths('FIE-HRMS',
+                       dataSets('FIE-HRMS')[1],
                        ask = FALSE)
     
     expect_true(is.character(files))
@@ -33,8 +33,8 @@ test_that('file paths are returned',{
 
 test_that('run information is read correctly',{
     info <- runinfo(
-        techniques()[1],
-        dataSets(techniques()[1])[1],
+        'FIE-HRMS',
+        dataSets('FIE-HRMS')[1],
         ask = FALSE)
     
     expect_s3_class(info,'tbl_df')
@@ -44,8 +44,8 @@ test_that('run information is read correctly',{
 
 test_that('description is returned',{
     experimentDescription <- description(
-        techniques()[1],
-        dataSets(techniques()[1])[1],
+        'FIE-HRMS',
+        dataSets('FIE-HRMS')[1],
         ask = FALSE)
     
     expect_equal(class(experimentDescription),'list')
