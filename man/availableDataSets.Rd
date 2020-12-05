@@ -2,9 +2,17 @@
 % Please edit documentation in R/availableDataSets.R
 \name{availableDataSets}
 \alias{availableDataSets}
-\title{availableDataSets}
+\title{Available data sets}
 \usage{
-availableDataSets()
+availableDataSets(dataSetDir = "DataSets", internalDir = TRUE)
+}
+\arguments{
+\item{dataSetDir}{directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the library location.}
+
+\item{internalDir}{Logical, are local data sets stored internal to the package location.}
+}
+\value{
+A tibble containing available data set information.
 }
 \description{
 Displays available data sets.

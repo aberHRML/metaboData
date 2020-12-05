@@ -2,22 +2,33 @@
 % Please edit documentation in R/files.R
 \name{filePaths}
 \alias{filePaths}
-\title{filePaths}
+\title{Data set file paths}
 \usage{
-filePaths(technique, dataSet)
+filePaths(technique, dataSet, dataSetDir = "DataSets", internalDir = TRUE, ...)
 }
 \arguments{
 \item{technique}{metabolomic technique name}
 
 \item{dataSet}{data set name}
+
+\item{dataSetDir}{directory to store local data sets. If \code{internalDir = TRUE} this is a directory relative to the library location.}
+
+\item{internalDir}{Logical, should the directory for storing local data sets be internal to the package location.}
+
+\item{...}{arguments to pass to \code{downloadDataSet()}}
+}
+\value{
+A character vector of file paths.
 }
 \description{
 Return a vector of file paths for a given data set of a given metabolomic technique.
 }
 \examples{
+\dontrun{
 files <- filePaths(
    techniques()[1],
    dataSets(techniques()[1])[1])
 
 head(files)
+}
 }

@@ -2,11 +2,9 @@
 context('metaboData')
 
 test_that('available data sets displayed',{
-    out <- capture.output(availableDataSets())
+    out <- availableDataSets()
     
-    skip_on_covr()
-    expect_true(is.character(out))
-    expect_true(length(out) == 8)
+    expect_s3_class(out,'tbl_df')
 })    
 
 
@@ -14,38 +12,48 @@ test_that('techinques are returned',{
     tech <- techniques()
     
     expect_true(is.character(tech))
-    expect_true(length(tech) == 1)
+    expect_length(tech,2)
 })
 
 test_that('data sets are returned',{
-    sets <- dataSets(techniques()[1])
+    sets <- dataSets('FIE-HRMS')
     
     expect_true(is.character(sets))
-    expect_true(length(sets) == 5)
+    expect_length(sets,5)
 })
 
 test_that('file paths are returned',{
-    files <- filePaths(techniques()[1],dataSets(techniques()[1])[1])
+    files <- filePaths('FIE-HRMS',
+                       dataSets('FIE-HRMS')[1],
+                       ask = FALSE)
     
     expect_true(is.character(files))
-    expect_true(length(files) == 68)
+    expect_length(files,12)
 })
 
 test_that('run information is read correctly',{
     info <- runinfo(
-        techniques()[1],
-        dataSets(techniques()[1])[1])
+        'FIE-HRMS',
+        dataSets('FIE-HRMS')[1],
+        ask = FALSE)
     
-    expect_true(identical(class(info),c("tbl_df","tbl","data.frame")))
-    expect_true(nrow(info) == 68)
-    expect_true(ncol(info) == 7)
+    expect_s3_class(info,'tbl_df')
+    expect_equal(nrow(info),10)
+    expect_equal(ncol(info),7)
 })
 
 test_that('description is returned',{
     experimentDescription <- description(
-        techniques()[1],
-        dataSets(techniques()[1])[1])
+        'FIE-HRMS',
+        dataSets('FIE-HRMS')[1],
+        ask = FALSE)
     
-    expect_true(class(experimentDescription) == 'list')
-    expect_true(length(experimentDescription) == 8)
+    expect_equal(class(experimentDescription),'list')
+    expect_length(experimentDescription,8)
+})
+
+test_that('available data sets displayed once downloaded',{
+    out <- availableDataSets()
+    
+    expect_s3_class(out,'tbl_df')
 })
