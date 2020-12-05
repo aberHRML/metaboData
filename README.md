@@ -29,7 +29,7 @@ install.packages('metaboData',repos = 'https://aberhrml.github.io/drat/')
 
 The package documentation can be browsed online at <https://aberHRML.github.io/metaboData/>. 
 
-If this is your first time using `metaboData` see the [vignette](https://aberHRML.github.io/metaboData/articles/metabodata.html) for information on how to get started.
+If this is your first time using `metaboData` see the [vignette](https://aberHRML.github.io/metaboData/articles/metaboData.html) for information on how to get started.
 
 If you believe you've found a bug in `metaboData`, please file a bug (and, if
 possible, a [reproducible example](https://reprex.tidyverse.org)) at

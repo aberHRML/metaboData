@@ -1,7 +1,5 @@
 ---
-title: "Using metaboData"
-author: "Jasen Finch"
-date: "`r Sys.Date()`"
+title: "metaboData"
 output: 
     prettydoc::html_pretty:
         toc: true
