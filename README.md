@@ -8,7 +8,7 @@
 ![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 <!-- badges: end -->
 
-An R package containing example data sets for metabolomics analyses.
+> Example data sets for metabolomics analyses
 
 ### Installation
 
