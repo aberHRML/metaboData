@@ -1,3 +1,7 @@
+# metaboData 0.5.1
+
+* [`metaboData::filePaths()`](https://aberhrml.github.io/metaboData/reference/filePaths.html) now only returns file paths to `.mzML` files.
+
 # metaboData 0.5.0
 
 * Added a `NEWS.md` file to track changes to the package.
