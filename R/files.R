@@ -29,7 +29,8 @@ filePaths <- function(technique,
     
     data_directory <- dataDirectory(dataSetDir,internalDir)
     
-    dir_ls(str_c(data_directory,technique,dataSet,sep = '/'))
+    dir_ls(str_c(data_directory,technique,dataSet,sep = '/')) %>%
+        .[str_detect(.,'.mzML.gz')]
 }
 
 #' Available data set techniques
