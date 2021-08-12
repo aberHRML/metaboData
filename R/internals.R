@@ -32,9 +32,21 @@ dataSetAvailable <- function(technique,dataSet,dataSetDir,internalDir){
     
     if (!(technique %in% available_data_sets$technique) | 
         !(dataSet %in% available_data_sets$`data set`)){
-        FALSE
+        stop('Data set not available. Use "availableDataSets()" to find available data sets.',call. = FALSE)
     } else {
-        TRUE
+        invisible(TRUE)
+    }
+}
+
+filesAvailable <- function(files,technique,dataSet,dataSetDir,internalDir){
+    available_data_sets <- availableDataSets(dataSetDir = dataSetDir,
+                                             internalDir = internalDir)
+    
+    if (!(technique %in% available_data_sets$technique) | 
+        !(dataSet %in% available_data_sets$`data set`)){
+        stop('Files are not available. Use "availableFiles()" to find available files for this data set.',call. = FALSE)
+    } else {
+        invisible(TRUE)
     }
 }
 

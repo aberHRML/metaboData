@@ -9,6 +9,14 @@ test_that('available data sets displayed',{
     expect_s3_class(out,'tbl_df')
 })    
 
+test_that('available files can be displayed',{
+    skip_on_cran()
+    
+    out <- availableFiles('FIE-HRMS','BdistachyonTechnical')
+    
+    expect_s3_class(out,'tbl_df')
+})   
+
 test_that('techinques are returned',{
     skip_on_cran()
     
@@ -32,8 +40,9 @@ test_that('a data set can be downloaded and that the file paths, runinfo and des
     
     downloadDataSet(
         'FIE-HRMS',
-        'BdistachyonTechnical',
-        ask = FALSE
+        dataSets('FIE-HRMS')[1],
+        ask = FALSE,
+        show_progress = FALSE
     )
     
     files <- filePaths('FIE-HRMS',
@@ -67,4 +76,18 @@ test_that('available data sets displayed once downloaded',{
     out <- availableDataSets()
     
     expect_s3_class(out,'tbl_df')
+    
+    out_files <- availableFiles('FIE-HRMS',
+                                dataSets('FIE-HRMS')[1])
+    
+    expect_s3_class(out_files,'tbl_df')
+})
+
+test_that('available files displayed once downloaded',{
+    skip_on_cran()
+    
+    out_files <- availableFiles('FIE-HRMS',
+                                dataSets('FIE-HRMS')[1])
+    
+    expect_s3_class(out_files,'tbl_df')
 })
