@@ -2,10 +2,12 @@
 # metaboData
 
 <!-- badges: start -->
-[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R build status](https://github.com/aberHRML/metaboData/workflows/R-CMD-check/badge.svg)](https://github.com/aberHRML/metaboData/actions)
 [![Coverage status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master)
 ![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
+[![CRAN status](https://www.r-pkg.org/badges/version/metaboData)](https://CRAN.R-project.org/package=metaboData)
+[![downloads](https://cranlogs.r-pkg.org/badges/metaboData)](https://cran.r-project.org/package=metaboData)
 <!-- badges: end -->
 
 > Example data sets for metabolomics analyses
