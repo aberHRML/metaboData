@@ -28,7 +28,7 @@ test_that('file paths are returned',{
                        ask = FALSE)
     
     expect_true(is.character(files))
-    expect_length(files,12)
+    expect_length(files,10)
 })
 
 test_that('run information is read correctly',{
