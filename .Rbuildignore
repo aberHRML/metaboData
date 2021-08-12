@@ -5,5 +5,5 @@
 README*
 ^appveyor\.yml$
 ^\.github$
-^doc$
+^docs$
 ^Meta$
