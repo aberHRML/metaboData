@@ -50,13 +50,18 @@ downloadDataSet <- function(technique,
     
     if (download == 1) {
         
-        data_set_directory <- dataDirectory(dataSetDir,internalDir)
+        data_set_directory <- dataDirectory(dataSetDir,internalDir) %>% 
+            str_c(.,
+                  technique,
+                  dataSet,
+                  sep = '/')
         
+        if (!dir_exists(data_set_directory)){
+            dir_create(data_set_directory)
+        }
+            
         pb_download(repo = remote_repository,
                     tag = release_tag,
-                    dest = str_c(data_set_directory,
-                                 technique,
-                                 dataSet,
-                                 sep = '/'))
+                    dest = data_set_directory)
     }
 }

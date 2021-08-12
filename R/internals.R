@@ -2,7 +2,7 @@
 remote_repository <- 'aberHRML/metaboData'
 
 #' @importFrom piggyback pb_list
-#' @importFrom fs fs_bytes
+#' @importFrom fs fs_bytes dir_create
 
 remoteData <- function(remote_repository){
     pb_list(repo = remote_repository) %>%
@@ -20,9 +20,7 @@ dataDirectory <- function(dataSetDir,internalDir){
         data_set_directory <- system.file(package = 'metaboData') %>%
             str_c('/',dataSetDir)
     } else {
-        if(dir.exists(data_set_directory)){
-            data_set_directory <- normalizePath(dataSetDir)   
-        }
+        data_set_directory <- dataSetDir
     }
     
     return(data_set_directory)
@@ -34,7 +32,7 @@ dataSetAvailable <- function(technique,dataSet,dataSetDir,internalDir){
     
     if (!(technique %in% available_data_sets$technique) | 
         !(dataSet %in% available_data_sets$`data set`)){
-       FALSE
+        FALSE
     } else {
         TRUE
     }
