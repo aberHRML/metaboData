@@ -7,7 +7,7 @@
 availableDataSets(dataSetDir = "DataSets", internalDir = TRUE)
 }
 \arguments{
-\item{dataSetDir}{directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the library location.}
+\item{dataSetDir}{directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the package installation location.}
 
 \item{internalDir}{Logical, are local data sets stored internal to the package location.}
 }
@@ -18,5 +18,7 @@ A tibble containing available data set information.
 Displays available data sets.
 }
 \examples{
+\dontrun{
 availableDataSets()
+}
 }

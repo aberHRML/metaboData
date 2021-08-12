@@ -1,6 +1,6 @@
 #' Available data sets
 #' @description Displays available data sets.
-#' @param dataSetDir directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the library location.
+#' @param dataSetDir directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the package installation location.
 #' @param internalDir Logical, are local data sets stored internal to the package location.
 #' @return A tibble containing available data set information.
 #' @importFrom purrr walk map
@@ -11,7 +11,9 @@
 #' @importFrom dplyr bind_rows mutate select left_join distinct
 #' @export
 #' @examples 
+#' \dontrun{
 #' availableDataSets()
+#' }
 
 availableDataSets <- function(dataSetDir = 'DataSets',
                               internalDir = TRUE){

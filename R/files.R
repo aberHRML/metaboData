@@ -37,7 +37,9 @@ filePaths <- function(technique,
 #' @description Return a vector of available metabolomic techniques.
 #' @return A character vector of available techniques.
 #' @examples 
+#' \dontrun{
 #' techniques()
+#' }
 #' @importFrom magrittr %>%
 #' @importFrom stringr str_split
 #' @importFrom purrr map_chr
@@ -55,7 +57,9 @@ techniques <- function(){
 #' @param technique metabolomic technique name
 #' @return A character vector of available data sets.
 #' @examples 
+#' \dontrun{
 #' dataSets(techniques()[1])
+#' }
 #' @importFrom tibble deframe
 #' @export
 
