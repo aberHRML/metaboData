@@ -20,7 +20,9 @@ dataDirectory <- function(dataSetDir,internalDir){
         data_set_directory <- system.file(package = 'metaboData') %>%
             str_c('/',dataSetDir)
     } else {
-        data_set_directory <- normalizePath(dataSetDir)
+        if(dir.exists(data_set_directory)){
+            data_set_directory <- normalizePath(dataSetDir)   
+        }
     }
     
     return(data_set_directory)
