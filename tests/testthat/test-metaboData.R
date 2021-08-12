@@ -35,6 +35,28 @@ test_that('data sets are returned',{
     expect_length(sets,5)
 })
 
+
+test_that('a file can be downloaded',{
+    skip_on_cran()
+    
+    data_directory <- str_c(tempdir(),'/DataSets')
+    
+    downloadFiles('31.mzML.gz',
+                  'FIE-HRMS',
+                  'BdistachyonTechnical',
+                  dataSetDir = data_directory,
+                  internalDir = FALSE,
+                  ask = FALSE,
+                  show_progress = FALSE)
+    
+    expect_true(file.exists(
+        str_c(data_directory,
+              'FIE-HRMS',
+              'BdistachyonTechnical',
+              '31.mzML.gz',
+              sep = '/')))
+})
+
 test_that('a data set can be downloaded and that the file paths, runinfo and description can be retrieved',{
     skip_on_cran()
     
