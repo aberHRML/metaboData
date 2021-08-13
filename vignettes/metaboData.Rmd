@@ -1,8 +1,8 @@
 ---
 title: "metaboData"
+author: Jasen Finch
 output: 
     prettydoc::html_pretty:
-        toc: true
         highlight: github
         theme: tactile
 vignette: >
@@ -19,18 +19,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Introduction
-
 metaboData provides raw and processed example metabolomics data sets.
 This document concisely outlines how to access the data sets and the meta information provided. 
-
-## Installation using aberhrml *drat* repository
-
-The package can be installed within R directly from a drat repository hosted via github using:
-
-```{r}
-install.packages('metaboData',repos = 'https://aberhrml.github.io/drat/')
-```
 
 ## Accessing data sets
 
@@ -40,7 +30,7 @@ Load the library:
 library(metaboData)
 ```
 
-The example data sets are remotely via the GitHub repository.
+The example data sets are stored remotely in the releases of the GitHub [repository](https://github.com/aberHRML/metaboData/releases) and accessed using the [piggyback](https://docs.ropensci.org/piggyback/) package.
 The available data sets can be viewed using:
 
 ```{r}
@@ -83,8 +73,6 @@ An experimental description can be retrieved for a given experiment of a given m
 experimentDescription <- description(
    techniques()[1],
    dataSets(techniques()[1])[1])
-
-str(experimentDescription)
 ```
 
 Run information can be retrieved for a given experiment of a given metabolomic technique using:
@@ -98,6 +86,6 @@ head(info)
 ```
 
 For `filePaths`, `description` and `runinfo`, if the specified data set is not available locally, by default the user will be prompted to consent to downloading the data.
-The `ask = FALSE` argument can be used to override this behavior. 
+The `ask = FALSE` argument can be used to override this behaviour. 
 
 The `abr1` FIE-MS data set from the [FIEmspro](https://github.com/aberHRML/FIEmspro) package is also available via lazy-load. 
