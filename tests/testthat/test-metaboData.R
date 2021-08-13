@@ -3,7 +3,6 @@ context('metaboData')
 
 test_that('available data sets displayed',{
     skip_on_cran()
-    skip_on_ci()
     
     out <- availableDataSets()
     
@@ -12,7 +11,6 @@ test_that('available data sets displayed',{
 
 test_that('available files can be displayed',{
     skip_on_cran()
-    skip_on_ci()
     
     out <- availableFiles('FIE-HRMS','BdistachyonTechnical')
     
@@ -21,7 +19,6 @@ test_that('available files can be displayed',{
 
 test_that('techinques are returned',{
     skip_on_cran()
-    skip_on_ci()
     
     tech <- techniques()
     
@@ -31,7 +28,6 @@ test_that('techinques are returned',{
 
 test_that('data sets are returned',{
     skip_on_cran()
-    skip_on_ci()
     
     sets <- dataSets('FIE-HRMS')
     
@@ -42,7 +38,6 @@ test_that('data sets are returned',{
 
 test_that('a file can be downloaded',{
     skip_on_cran()
-    skip_on_ci()
     
     data_directory <- str_c(tempdir(),'/DataSets')
     
@@ -64,7 +59,6 @@ test_that('a file can be downloaded',{
 
 test_that('a data set can be downloaded and that the file paths, runinfo and description can be retrieved',{
     skip_on_cran()
-    skip_on_ci()
     
     downloadDataSet(
         'FIE-HRMS',
@@ -100,7 +94,6 @@ test_that('a data set can be downloaded and that the file paths, runinfo and des
 
 test_that('available data sets displayed once downloaded',{
     skip_on_cran()
-    skip_on_ci()
     
     out <- availableDataSets()
     
@@ -114,7 +107,6 @@ test_that('available data sets displayed once downloaded',{
 
 test_that('available files displayed once downloaded',{
     skip_on_cran()
-    skip_on_ci()
     
     out_files <- availableFiles('FIE-HRMS',
                                 dataSets('FIE-HRMS')[1])
