@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metaboData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.0</span>
       </span>
     </div>
 
@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -56,7 +56,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/aberHRML/metaboData/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -70,11 +70,11 @@
 
       
 
-      </header><script src="metaboData_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="metaboData_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
-<script src="metaboData_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
+      </header><script src="metaboData_files/header-attrs-2.10/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>metaboData</h1>
+                        <h4 class="author">Jasen Finch</h4>
             
       
       <small class="dont-index">Source: <a href="https://github.com/aberHRML/metaboData/blob/master/vignettes/metaboData.Rmd"><code>vignettes/metaboData.Rmd</code></a></small>
@@ -84,58 +84,45 @@
 
     
     
-<div id="introduction" class="section level2">
-<h2 class="hasAnchor">
-<a href="#introduction" class="anchor"></a>Introduction</h2>
 <p>metaboData provides raw and processed example metabolomics data sets. This document concisely outlines how to access the data sets and the meta information provided.</p>
-</div>
-<div id="installation-using-aberhrml-drat-repository" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation-using-aberhrml-drat-repository" class="anchor"></a>Installation using aberhrml <em>drat</em> repository</h2>
-<p>The package can be installed within R directly from a drat repository hosted via github using:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'metaboData'</span>,repos <span class="op">=</span> <span class="st">'https://aberhrml.github.io/drat/'</span><span class="op">)</span></code></pre></div>
-</div>
 <div id="accessing-data-sets" class="section level2">
 <h2 class="hasAnchor">
 <a href="#accessing-data-sets" class="anchor"></a>Accessing data sets</h2>
 <p>Load the library:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/aberHRML/metaboData">metaboData</a></span><span class="op">)</span></code></pre></div>
-<p>The example data sets are remotely via the GitHub repository. The available data sets can be viewed using:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<p>The example data sets are stored remotely in the releases of the GitHub <a href="https://github.com/aberHRML/metaboData/releases">repository</a> and accessed using the <a href="https://docs.ropensci.org/piggyback/">piggyback</a> package. The available data sets can be viewed using:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/availableDataSets.html">availableDataSets</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>The available metabolomic techniques can be returned using:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>The available data sets for a given metabolomic technique can be returned using:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/dataSets.html">dataSets</a></span><span class="op">(</span><span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <p>A particular data set can be downloaded for use with:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/downloadDataSet.html">downloadDataSet</a></span><span class="op">(</span><span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,
                 <span class="fu"><a href="../reference/dataSets.html">dataSets</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <p>By default these will be stored within the library location. This behaviour can be adjusted using the <code>dataSetDir</code> and <code>internalDir</code> arguments.</p>
 <p>File paths for data files within a given data set can be returned using the following:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">files</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filePaths.html">filePaths</a></span><span class="op">(</span>
     <span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,
     <span class="fu"><a href="../reference/dataSets.html">dataSets</a></span><span class="op">(</span><span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <p>An experimental description can be retrieved for a given experiment of a given metabolomic technique using:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">experimentDescription</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/description.html">description</a></span><span class="op">(</span>
    <span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,
-   <span class="fu"><a href="../reference/dataSets.html">dataSets</a></span><span class="op">(</span><span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">experimentDescription</span><span class="op">)</span></code></pre></div>
+   <span class="fu"><a href="../reference/dataSets.html">dataSets</a></span><span class="op">(</span><span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <p>Run information can be retrieved for a given experiment of a given metabolomic technique using:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">info</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/runinfo.html">runinfo</a></span><span class="op">(</span>
     <span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,
     <span class="fu"><a href="../reference/dataSets.html">dataSets</a></span><span class="op">(</span><span class="fu"><a href="../reference/techniques.html">techniques</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">info</span><span class="op">)</span></code></pre></div>
-<p>For <code>filePaths</code>, <code>description</code> and <code>runinfo</code>, if the specified data set is not available locally, by default the user will be prompted to consent to downloading the data. The <code>ask = FALSE</code> argument can be used to override this behavior.</p>
+<p>For <code>filePaths</code>, <code>description</code> and <code>runinfo</code>, if the specified data set is not available locally, by default the user will be prompted to consent to downloading the data. The <code>ask = FALSE</code> argument can be used to override this behaviour.</p>
 <p>The <code>abr1</code> FIE-MS data set from the <a href="https://github.com/aberHRML/FIEmspro">FIEmspro</a> package is also available via lazy-load.</p>
 </div>
   </div>
