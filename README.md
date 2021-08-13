@@ -8,6 +8,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/aberHRML/metaboData/blob/master/LICENSE.md)
 [![CRAN status](https://www.r-pkg.org/badges/version/metaboData)](https://CRAN.R-project.org/package=metaboData)
 [![downloads](https://cranlogs.r-pkg.org/badges/metaboData)](https://cran.r-project.org/package=metaboData)
+[![DOI](https://zenodo.org/badge/93455339.svg)](https://zenodo.org/badge/latestdoi/93455339)
 <!-- badges: end -->
 
 > Example data sets for metabolomics analyses

@@ -26,6 +26,6 @@ Suggests:
     knitr,
     rmarkdown,
     prettydoc
-URL: https://github.com/aberHRML/metaboData
+URL: https://aberhrml.github.io/metaboData/
 BugReports: https://github.com/aberHRML/metaboData/issues
 VignetteBuilder: knitr
