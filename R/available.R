@@ -1,7 +1,7 @@
 #' Available data sets
 #' @description Displays available data sets.
-#' @param dataSetDir directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the library location.
-#' @param internalDir Logical, are local data sets stored internal to the package location.
+#' @param dataSetDir directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the package installation location.
+#' @param internalDir stored the data set internally to the package installation location
 #' @return A tibble containing available data set information.
 #' @importFrom purrr walk map
 #' @importFrom stringr str_extract regex str_remove_all
@@ -11,7 +11,9 @@
 #' @importFrom dplyr bind_rows mutate select left_join distinct
 #' @export
 #' @examples 
+#' \dontrun{
 #' availableDataSets()
+#' }
 
 availableDataSets <- function(dataSetDir = 'DataSets',
                               internalDir = TRUE){
@@ -92,4 +94,57 @@ availableDataSets <- function(dataSetDir = 'DataSets',
    }
    
    return(remote_data_sets)
+}
+
+#' Available files for a data set
+#' @description Display the available files for a given data set.
+#' @param technique metabolomic technique name
+#' @param dataSet data set name
+#' @param dataSetDir directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the package installation location.
+#' @param internalDir stored the data set internally to the package installation location
+#' @return A tibble containing available file information.
+#' @importFrom dplyr right_join relocate arrange
+#' @export
+#' @examples 
+#' \dontrun{
+#' availableFiles('FIE-HRMS','BdistachyonTechnical')
+#' }
+
+availableFiles <- function(technique,
+                           dataSet,
+                           dataSetDir = 'DataSets',
+                           internalDir = TRUE){
+   remote_data <- remoteData(remote_repository)
+   
+   remote_files <- remote_data %>%
+      filter(technique == technique,
+             `data set` == dataSet) %>% 
+      select(file_name,size,technique,`data set`)
+   
+   data_set_directory <- dataDirectory(dataSetDir,
+                                       internalDir) %>% 
+      str_c(.,technique,dataSet,sep = '/')
+   
+   if (dir_exists(data_set_directory)){
+      
+      remote_files <- data_set_directory %>%
+         dir_ls() %>%
+         basename() %>%
+         tibble(file_name = .) %>%
+         mutate(status = 'available') %>% 
+         right_join(remote_files, 
+                   by = 'file_name') %>%
+         {
+            .$status[is.na(.$status)] <- 'needs downloading'  
+            .
+         } %>% 
+         relocate(status,
+                  .after = `data set`) %>% 
+         arrange(file_name)
+   } else {
+      remote_files <- remote_files %>%
+         mutate(status = 'needs downloading')
+   }
+   
+   return(remote_files)
 }

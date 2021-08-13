@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metaboData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.0</span>
       </span>
     </div>
 
@@ -80,30 +80,24 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
+  <a href="../articles/metaboData.html">Get started</a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="../articles/metabodata.html">Using metaboData</a>
-    </li>
-  </ul>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/aberHRML/metaboData/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -186,347 +180,26 @@ biological replicates in each class has</p>
 <span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1]  120 2000</div><div class='input'>
 <span class='co'># names of the variables</span>
-<span class='fu'><a href='https://rdrr.io/r/base/dimnames.html'>dimnames</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span>
-</div><div class='output co'>#&gt;    [1] "N1"    "N2"    "N3"    "N4"    "N5"    "N6"    "N7"    "N8"    "N9"   
-#&gt;   [10] "N10"   "N11"   "N12"   "N13"   "N14"   "N15"   "N16"   "N17"   "N18"  
-#&gt;   [19] "N19"   "N20"   "N21"   "N22"   "N23"   "N24"   "N25"   "N26"   "N27"  
-#&gt;   [28] "N28"   "N29"   "N30"   "N31"   "N32"   "N33"   "N34"   "N35"   "N36"  
-#&gt;   [37] "N37"   "N38"   "N39"   "N40"   "N41"   "N42"   "N43"   "N44"   "N45"  
-#&gt;   [46] "N46"   "N47"   "N48"   "N49"   "N50"   "N51"   "N52"   "N53"   "N54"  
-#&gt;   [55] "N55"   "N56"   "N57"   "N58"   "N59"   "N60"   "N61"   "N62"   "N63"  
-#&gt;   [64] "N64"   "N65"   "N66"   "N67"   "N68"   "N69"   "N70"   "N71"   "N72"  
-#&gt;   [73] "N73"   "N74"   "N75"   "N76"   "N77"   "N78"   "N79"   "N80"   "N81"  
-#&gt;   [82] "N82"   "N83"   "N84"   "N85"   "N86"   "N87"   "N88"   "N89"   "N90"  
-#&gt;   [91] "N91"   "N92"   "N93"   "N94"   "N95"   "N96"   "N97"   "N98"   "N99"  
-#&gt;  [100] "N100"  "N101"  "N102"  "N103"  "N104"  "N105"  "N106"  "N107"  "N108" 
-#&gt;  [109] "N109"  "N110"  "N111"  "N112"  "N113"  "N114"  "N115"  "N116"  "N117" 
-#&gt;  [118] "N118"  "N119"  "N120"  "N121"  "N122"  "N123"  "N124"  "N125"  "N126" 
-#&gt;  [127] "N127"  "N128"  "N129"  "N130"  "N131"  "N132"  "N133"  "N134"  "N135" 
-#&gt;  [136] "N136"  "N137"  "N138"  "N139"  "N140"  "N141"  "N142"  "N143"  "N144" 
-#&gt;  [145] "N145"  "N146"  "N147"  "N148"  "N149"  "N150"  "N151"  "N152"  "N153" 
-#&gt;  [154] "N154"  "N155"  "N156"  "N157"  "N158"  "N159"  "N160"  "N161"  "N162" 
-#&gt;  [163] "N163"  "N164"  "N165"  "N166"  "N167"  "N168"  "N169"  "N170"  "N171" 
-#&gt;  [172] "N172"  "N173"  "N174"  "N175"  "N176"  "N177"  "N178"  "N179"  "N180" 
-#&gt;  [181] "N181"  "N182"  "N183"  "N184"  "N185"  "N186"  "N187"  "N188"  "N189" 
-#&gt;  [190] "N190"  "N191"  "N192"  "N193"  "N194"  "N195"  "N196"  "N197"  "N198" 
-#&gt;  [199] "N199"  "N200"  "N201"  "N202"  "N203"  "N204"  "N205"  "N206"  "N207" 
-#&gt;  [208] "N208"  "N209"  "N210"  "N211"  "N212"  "N213"  "N214"  "N215"  "N216" 
-#&gt;  [217] "N217"  "N218"  "N219"  "N220"  "N221"  "N222"  "N223"  "N224"  "N225" 
-#&gt;  [226] "N226"  "N227"  "N228"  "N229"  "N230"  "N231"  "N232"  "N233"  "N234" 
-#&gt;  [235] "N235"  "N236"  "N237"  "N238"  "N239"  "N240"  "N241"  "N242"  "N243" 
-#&gt;  [244] "N244"  "N245"  "N246"  "N247"  "N248"  "N249"  "N250"  "N251"  "N252" 
-#&gt;  [253] "N253"  "N254"  "N255"  "N256"  "N257"  "N258"  "N259"  "N260"  "N261" 
-#&gt;  [262] "N262"  "N263"  "N264"  "N265"  "N266"  "N267"  "N268"  "N269"  "N270" 
-#&gt;  [271] "N271"  "N272"  "N273"  "N274"  "N275"  "N276"  "N277"  "N278"  "N279" 
-#&gt;  [280] "N280"  "N281"  "N282"  "N283"  "N284"  "N285"  "N286"  "N287"  "N288" 
-#&gt;  [289] "N289"  "N290"  "N291"  "N292"  "N293"  "N294"  "N295"  "N296"  "N297" 
-#&gt;  [298] "N298"  "N299"  "N300"  "N301"  "N302"  "N303"  "N304"  "N305"  "N306" 
-#&gt;  [307] "N307"  "N308"  "N309"  "N310"  "N311"  "N312"  "N313"  "N314"  "N315" 
-#&gt;  [316] "N316"  "N317"  "N318"  "N319"  "N320"  "N321"  "N322"  "N323"  "N324" 
-#&gt;  [325] "N325"  "N326"  "N327"  "N328"  "N329"  "N330"  "N331"  "N332"  "N333" 
-#&gt;  [334] "N334"  "N335"  "N336"  "N337"  "N338"  "N339"  "N340"  "N341"  "N342" 
-#&gt;  [343] "N343"  "N344"  "N345"  "N346"  "N347"  "N348"  "N349"  "N350"  "N351" 
-#&gt;  [352] "N352"  "N353"  "N354"  "N355"  "N356"  "N357"  "N358"  "N359"  "N360" 
-#&gt;  [361] "N361"  "N362"  "N363"  "N364"  "N365"  "N366"  "N367"  "N368"  "N369" 
-#&gt;  [370] "N370"  "N371"  "N372"  "N373"  "N374"  "N375"  "N376"  "N377"  "N378" 
-#&gt;  [379] "N379"  "N380"  "N381"  "N382"  "N383"  "N384"  "N385"  "N386"  "N387" 
-#&gt;  [388] "N388"  "N389"  "N390"  "N391"  "N392"  "N393"  "N394"  "N395"  "N396" 
-#&gt;  [397] "N397"  "N398"  "N399"  "N400"  "N401"  "N402"  "N403"  "N404"  "N405" 
-#&gt;  [406] "N406"  "N407"  "N408"  "N409"  "N410"  "N411"  "N412"  "N413"  "N414" 
-#&gt;  [415] "N415"  "N416"  "N417"  "N418"  "N419"  "N420"  "N421"  "N422"  "N423" 
-#&gt;  [424] "N424"  "N425"  "N426"  "N427"  "N428"  "N429"  "N430"  "N431"  "N432" 
-#&gt;  [433] "N433"  "N434"  "N435"  "N436"  "N437"  "N438"  "N439"  "N440"  "N441" 
-#&gt;  [442] "N442"  "N443"  "N444"  "N445"  "N446"  "N447"  "N448"  "N449"  "N450" 
-#&gt;  [451] "N451"  "N452"  "N453"  "N454"  "N455"  "N456"  "N457"  "N458"  "N459" 
-#&gt;  [460] "N460"  "N461"  "N462"  "N463"  "N464"  "N465"  "N466"  "N467"  "N468" 
-#&gt;  [469] "N469"  "N470"  "N471"  "N472"  "N473"  "N474"  "N475"  "N476"  "N477" 
-#&gt;  [478] "N478"  "N479"  "N480"  "N481"  "N482"  "N483"  "N484"  "N485"  "N486" 
-#&gt;  [487] "N487"  "N488"  "N489"  "N490"  "N491"  "N492"  "N493"  "N494"  "N495" 
-#&gt;  [496] "N496"  "N497"  "N498"  "N499"  "N500"  "N501"  "N502"  "N503"  "N504" 
-#&gt;  [505] "N505"  "N506"  "N507"  "N508"  "N509"  "N510"  "N511"  "N512"  "N513" 
-#&gt;  [514] "N514"  "N515"  "N516"  "N517"  "N518"  "N519"  "N520"  "N521"  "N522" 
-#&gt;  [523] "N523"  "N524"  "N525"  "N526"  "N527"  "N528"  "N529"  "N530"  "N531" 
-#&gt;  [532] "N532"  "N533"  "N534"  "N535"  "N536"  "N537"  "N538"  "N539"  "N540" 
-#&gt;  [541] "N541"  "N542"  "N543"  "N544"  "N545"  "N546"  "N547"  "N548"  "N549" 
-#&gt;  [550] "N550"  "N551"  "N552"  "N553"  "N554"  "N555"  "N556"  "N557"  "N558" 
-#&gt;  [559] "N559"  "N560"  "N561"  "N562"  "N563"  "N564"  "N565"  "N566"  "N567" 
-#&gt;  [568] "N568"  "N569"  "N570"  "N571"  "N572"  "N573"  "N574"  "N575"  "N576" 
-#&gt;  [577] "N577"  "N578"  "N579"  "N580"  "N581"  "N582"  "N583"  "N584"  "N585" 
-#&gt;  [586] "N586"  "N587"  "N588"  "N589"  "N590"  "N591"  "N592"  "N593"  "N594" 
-#&gt;  [595] "N595"  "N596"  "N597"  "N598"  "N599"  "N600"  "N601"  "N602"  "N603" 
-#&gt;  [604] "N604"  "N605"  "N606"  "N607"  "N608"  "N609"  "N610"  "N611"  "N612" 
-#&gt;  [613] "N613"  "N614"  "N615"  "N616"  "N617"  "N618"  "N619"  "N620"  "N621" 
-#&gt;  [622] "N622"  "N623"  "N624"  "N625"  "N626"  "N627"  "N628"  "N629"  "N630" 
-#&gt;  [631] "N631"  "N632"  "N633"  "N634"  "N635"  "N636"  "N637"  "N638"  "N639" 
-#&gt;  [640] "N640"  "N641"  "N642"  "N643"  "N644"  "N645"  "N646"  "N647"  "N648" 
-#&gt;  [649] "N649"  "N650"  "N651"  "N652"  "N653"  "N654"  "N655"  "N656"  "N657" 
-#&gt;  [658] "N658"  "N659"  "N660"  "N661"  "N662"  "N663"  "N664"  "N665"  "N666" 
-#&gt;  [667] "N667"  "N668"  "N669"  "N670"  "N671"  "N672"  "N673"  "N674"  "N675" 
-#&gt;  [676] "N676"  "N677"  "N678"  "N679"  "N680"  "N681"  "N682"  "N683"  "N684" 
-#&gt;  [685] "N685"  "N686"  "N687"  "N688"  "N689"  "N690"  "N691"  "N692"  "N693" 
-#&gt;  [694] "N694"  "N695"  "N696"  "N697"  "N698"  "N699"  "N700"  "N701"  "N702" 
-#&gt;  [703] "N703"  "N704"  "N705"  "N706"  "N707"  "N708"  "N709"  "N710"  "N711" 
-#&gt;  [712] "N712"  "N713"  "N714"  "N715"  "N716"  "N717"  "N718"  "N719"  "N720" 
-#&gt;  [721] "N721"  "N722"  "N723"  "N724"  "N725"  "N726"  "N727"  "N728"  "N729" 
-#&gt;  [730] "N730"  "N731"  "N732"  "N733"  "N734"  "N735"  "N736"  "N737"  "N738" 
-#&gt;  [739] "N739"  "N740"  "N741"  "N742"  "N743"  "N744"  "N745"  "N746"  "N747" 
-#&gt;  [748] "N748"  "N749"  "N750"  "N751"  "N752"  "N753"  "N754"  "N755"  "N756" 
-#&gt;  [757] "N757"  "N758"  "N759"  "N760"  "N761"  "N762"  "N763"  "N764"  "N765" 
-#&gt;  [766] "N766"  "N767"  "N768"  "N769"  "N770"  "N771"  "N772"  "N773"  "N774" 
-#&gt;  [775] "N775"  "N776"  "N777"  "N778"  "N779"  "N780"  "N781"  "N782"  "N783" 
-#&gt;  [784] "N784"  "N785"  "N786"  "N787"  "N788"  "N789"  "N790"  "N791"  "N792" 
-#&gt;  [793] "N793"  "N794"  "N795"  "N796"  "N797"  "N798"  "N799"  "N800"  "N801" 
-#&gt;  [802] "N802"  "N803"  "N804"  "N805"  "N806"  "N807"  "N808"  "N809"  "N810" 
-#&gt;  [811] "N811"  "N812"  "N813"  "N814"  "N815"  "N816"  "N817"  "N818"  "N819" 
-#&gt;  [820] "N820"  "N821"  "N822"  "N823"  "N824"  "N825"  "N826"  "N827"  "N828" 
-#&gt;  [829] "N829"  "N830"  "N831"  "N832"  "N833"  "N834"  "N835"  "N836"  "N837" 
-#&gt;  [838] "N838"  "N839"  "N840"  "N841"  "N842"  "N843"  "N844"  "N845"  "N846" 
-#&gt;  [847] "N847"  "N848"  "N849"  "N850"  "N851"  "N852"  "N853"  "N854"  "N855" 
-#&gt;  [856] "N856"  "N857"  "N858"  "N859"  "N860"  "N861"  "N862"  "N863"  "N864" 
-#&gt;  [865] "N865"  "N866"  "N867"  "N868"  "N869"  "N870"  "N871"  "N872"  "N873" 
-#&gt;  [874] "N874"  "N875"  "N876"  "N877"  "N878"  "N879"  "N880"  "N881"  "N882" 
-#&gt;  [883] "N883"  "N884"  "N885"  "N886"  "N887"  "N888"  "N889"  "N890"  "N891" 
-#&gt;  [892] "N892"  "N893"  "N894"  "N895"  "N896"  "N897"  "N898"  "N899"  "N900" 
-#&gt;  [901] "N901"  "N902"  "N903"  "N904"  "N905"  "N906"  "N907"  "N908"  "N909" 
-#&gt;  [910] "N910"  "N911"  "N912"  "N913"  "N914"  "N915"  "N916"  "N917"  "N918" 
-#&gt;  [919] "N919"  "N920"  "N921"  "N922"  "N923"  "N924"  "N925"  "N926"  "N927" 
-#&gt;  [928] "N928"  "N929"  "N930"  "N931"  "N932"  "N933"  "N934"  "N935"  "N936" 
-#&gt;  [937] "N937"  "N938"  "N939"  "N940"  "N941"  "N942"  "N943"  "N944"  "N945" 
-#&gt;  [946] "N946"  "N947"  "N948"  "N949"  "N950"  "N951"  "N952"  "N953"  "N954" 
-#&gt;  [955] "N955"  "N956"  "N957"  "N958"  "N959"  "N960"  "N961"  "N962"  "N963" 
-#&gt;  [964] "N964"  "N965"  "N966"  "N967"  "N968"  "N969"  "N970"  "N971"  "N972" 
-#&gt;  [973] "N973"  "N974"  "N975"  "N976"  "N977"  "N978"  "N979"  "N980"  "N981" 
-#&gt;  [982] "N982"  "N983"  "N984"  "N985"  "N986"  "N987"  "N988"  "N989"  "N990" 
-#&gt;  [991] "N991"  "N992"  "N993"  "N994"  "N995"  "N996"  "N997"  "N998"  "N999" 
-#&gt; [1000] "N1000"
-#&gt;  [ reached getOption("max.print") -- omitted 1000 entries ]</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/base/dimnames.html'>dimnames</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+ <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "N1" "N2" "N3" "N4" "N5" "N6"</div><div class='input'>
 <span class='co'># print out the experimental factors</span>
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>abr1</span><span class='op'>$</span><span class='va'>fact</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;     injorder                              pathcdf filecdf name.org     remark
-#&gt; 1          1 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  01.cdf     12_2         ok
-#&gt; 2          2 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  02.cdf     13_3         ok
-#&gt; 3          3 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  03.cdf     15_4         ok
-#&gt; 4          4 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  04.cdf     12_1         ok
-#&gt; 5          5 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  05.cdf     12_2         ok
-#&gt; 6          6 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  06.cdf     11_1         ok
-#&gt; 7          7 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  07.cdf     14_2         ok
-#&gt; 8          8 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  08.cdf     11_4         ok
-#&gt; 9          9 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  09.cdf     13_H         ok
-#&gt; 10        10 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  10.cdf     15_H         ok
-#&gt; 11        11 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  11.cdf     14_4         ok
-#&gt; 12        12 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  12.cdf     14_5         ok
-#&gt; 13        13 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  13.cdf     12_1         ok
-#&gt; 14        14 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  14.cdf     15_2         ok
-#&gt; 15        15 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  15.cdf     13_H         ok
-#&gt; 16        16 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  16.cdf     11_5         ok
-#&gt; 17        17 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  17.cdf     14_3         ok
-#&gt; 18        18 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  18.cdf     11_3         ok
-#&gt; 19        19 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  19.cdf     13_2         ok
-#&gt; 20        20 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  20.cdf     12_H         ok
-#&gt; 21        21 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  21.cdf     11_4         ok
-#&gt; 22        22 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  22.cdf     15_3         ok
-#&gt; 23        23 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  23.cdf     13_5         ok
-#&gt; 24        24 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  24.cdf     12_4         ok
-#&gt; 25        25 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  25.cdf     12_H         ok
-#&gt; 26        26 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  26.cdf     11_H         ok
-#&gt; 27        27 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  27.cdf     15_3         ok
-#&gt; 28        28 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  28.cdf     12_H         ok
-#&gt; 29        29 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  29.cdf     15_H         ok
-#&gt; 30        30 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  30.cdf     14_1         ok
-#&gt; 31        31 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  31.cdf     11_1         ok
-#&gt; 32        32 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  32.cdf     15_1         ok
-#&gt; 33        33 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  33.cdf     15_5         ok
-#&gt; 34        34 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  34.cdf     12_5         ok
-#&gt; 35        35 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  35.cdf     13_3         ok
-#&gt; 36        36 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  36.cdf     12_4         ok
-#&gt; 37        37 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  37.cdf     11_H         ok
-#&gt; 38        38 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  38.cdf     11_1         ok
-#&gt; 39        39 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  39.cdf     15_5         ok
-#&gt; 40        40 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  40.cdf     11_5         ok
-#&gt; 41        41 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  41.cdf     13_1         ok
-#&gt; 42        42 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  42.cdf     13_2         ok
-#&gt; 43        43 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  43.cdf     13_4         ok
-#&gt; 44        44 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  44.cdf     14_3         ok
-#&gt; 45        45 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  45.cdf     15_2         ok
-#&gt; 46        46 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  46.cdf     13_4         ok
-#&gt; 47        47 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  47.cdf     11_3         ok
-#&gt; 48        48 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  48.cdf     14_2         ok
-#&gt; 49        49 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  49.cdf     13_5         ok
-#&gt; 50        50 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  50.cdf     15_4         ok
-#&gt; 51        51 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  51.cdf     14_5 relabelled
-#&gt; 52        52 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  52.cdf     14_H         ok
-#&gt; 53        53 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  53.cdf     15_3         ok
-#&gt; 54        54 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  54.cdf     14_4         ok
-#&gt; 55        55 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  55.cdf     12_2         ok
-#&gt; 56        56 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  56.cdf     11_4         ok
-#&gt; 57        57 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  57.cdf     15_4         ok
-#&gt; 58        58 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  58.cdf     11_1         ok
-#&gt; 59        59 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  59.cdf     14_5         ok
-#&gt; 60        60 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  60.cdf     14_4         ok
-#&gt; 61        61 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  61.cdf     14_4         ok
-#&gt; 62        62 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  62.cdf     14_1         ok
-#&gt; 63        63 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  63.cdf     12_1         ok
-#&gt; 64        64 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  64.cdf     15_H         ok
-#&gt; 65        65 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  65.cdf     11_3         ok
-#&gt; 66        66 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  66.cdf     11_2         ok
-#&gt; 67        67 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  67.cdf     11_H         ok
-#&gt; 68        68 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  68.cdf     14_3         ok
-#&gt; 69        69 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  69.cdf     12_3         ok
-#&gt; 70        70 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  70.cdf     13_1         ok
-#&gt; 71        71 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  71.cdf     11_2         ok
-#&gt; 72        72 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  72.cdf     13_H         ok
-#&gt; 73        73 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  73.cdf     14_H         ok
-#&gt; 74        74 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  74.cdf     13_2         ok
-#&gt; 75        75 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  75.cdf     11_3         ok
-#&gt; 76        76 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  76.cdf     13_5         ok
-#&gt; 77        77 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  77.cdf     12_3         ok
-#&gt; 78        78 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  78.cdf     14_2         ok
-#&gt; 79        79 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  79.cdf     13_5         ok
-#&gt; 80        80 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  80.cdf     11_2         ok
-#&gt; 81        81 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  81.cdf     11_4         ok
-#&gt; 82        82 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  82.cdf     14_3         ok
-#&gt; 83        83 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  83.cdf     12_H         ok
-#&gt; 84        84 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  84.cdf     15_2         ok
-#&gt; 85        85 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  85.cdf     13_3         ok
-#&gt; 86        86 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  86.cdf     13_2         ok
-#&gt; 87        87 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  87.cdf     13_1         ok
-#&gt; 88        88 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  88.cdf     14_1         ok
-#&gt; 89        89 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  89.cdf     13_4         ok
-#&gt; 90        90 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  90.cdf     12_5         ok
-#&gt; 91        91 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  91.cdf     15_3         ok
-#&gt; 92        92 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  92.cdf     12_2         ok
-#&gt; 93        93 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  93.cdf     15_1         ok
-#&gt; 94        94 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  94.cdf     14_H         ok
-#&gt; 95        95 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  95.cdf     11_5         ok
-#&gt; 96        96 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  96.cdf     14_2         ok
-#&gt; 97        97 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  97.cdf     13_4         ok
-#&gt; 98        98 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  98.cdf     13_H         ok
-#&gt; 99        99 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  99.cdf     15_1         ok
-#&gt; 100      100 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 100.cdf     12_4         ok
-#&gt; 101      101 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 101.cdf     12_4         ok
-#&gt; 102      102 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 102.cdf     15_1         ok
-#&gt; 103      103 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 103.cdf     14_1         ok
-#&gt; 104      104 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 104.cdf     14_5         ok
-#&gt; 105      105 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 105.cdf     15_H         ok
-#&gt; 106      106 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 106.cdf     15_5         ok
-#&gt; 107      107 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 107.cdf     12_1         ok
-#&gt; 108      108 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 108.cdf     12_3         ok
-#&gt; 109      109 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 109.cdf     13_3         ok
-#&gt; 110      110 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 110.cdf     12_5         ok
-#&gt; 111      111 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf 111.cdf     15_5         ok
-#&gt;     name rep day class
-#&gt; 1   12_2   2   2     2
-#&gt; 2   13_4   3   3     3
-#&gt; 3   15_5   5   4     4
-#&gt; 4   12_2   2   1     1
-#&gt; 5   12_2   2   2     2
-#&gt; 6   11_2   1   1     1
-#&gt; 7   14_3   4   2     2
-#&gt; 8   11_5   1   4     4
-#&gt; 9   13_H   3   H     6
-#&gt; 10  15_H   5   H     6
-#&gt; 11  14_5   4   4     4
-#&gt; 12  14_6   4   5     5
-#&gt; 13  12_2   2   1     1
-#&gt; 14  15_3   5   2     2
-#&gt; 15  13_H   3   H     6
-#&gt; 16  11_6   1   5     5
-#&gt; 17  14_4   4   3     3
-#&gt; 18  11_4   1   3     3
-#&gt; 19  13_2   3   2     2
-#&gt; 20  12_H   2   H     6
-#&gt; 21  11_5   1   4     4
-#&gt; 22  15_3   5   3     3
-#&gt; 23  13_6   3   5     5
-#&gt; 24  12_4   2   4     4
-#&gt; 25  12_H   2   H     6
-#&gt; 26  11_H   1   H     6
-#&gt; 27  15_3   5   3     3
-#&gt; 28  12_H   2   H     6
-#&gt; 29  15_H   5   H     6
-#&gt; 30  14_2   4   1     1
-#&gt; 31  11_2   1   1     1
-#&gt; 32  15_2   5   1     1
-#&gt; 33  15_6   5   5     5
-#&gt; 34  12_6   2   5     5
-#&gt; 35  13_4   3   3     3
-#&gt; 36  12_4   2   4     4
-#&gt; 37  11_H   1   H     6
-#&gt; 38  11_2   1   1     1
-#&gt; 39  15_6   5   5     5
-#&gt; 40  11_6   1   5     5
-#&gt; 41  13_2   3   1     1
-#&gt; 42  13_2   3   2     2
-#&gt; 43  13_4   3   4     4
-#&gt; 44  14_4   4   3     3
-#&gt; 45  15_3   5   2     2
-#&gt; 46  13_4   3   4     4
-#&gt; 47  11_4   1   3     3
-#&gt; 48  14_3   4   2     2
-#&gt; 49  13_6   3   5     5
-#&gt; 50  15_5   5   4     4
-#&gt; 51  15_4   5   4     4
-#&gt; 52  14_H   4   H     6
-#&gt; 53  15_4   5   3     3
-#&gt; 54  14_5   4   4     4
-#&gt; 55  12_3   2   2     2
-#&gt; 56  11_5   1   4     4
-#&gt; 57  15_5   5   4     4
-#&gt; 58  11_2   1   1     1
-#&gt; 59  14_6   4   5     5
-#&gt; 60  14_4   4   4     4
-#&gt; 61  14_4   4   4     4
-#&gt; 62  14_2   4   1     1
-#&gt; 63  12_2   2   1     1
-#&gt; 64  15_H   5   H     6
-#&gt; 65  11_4   1   3     3
-#&gt; 66  11_2   1   2     2
-#&gt; 67  11_H   1   H     6
-#&gt; 68  14_4   4   3     3
-#&gt; 69  12_4   2   3     3
-#&gt; 70  13_1   3   1     1
-#&gt; 71  11_2   1   2     2
-#&gt; 72  13_H   3   H     6
-#&gt; 73  14_H   4   H     6
-#&gt; 74  13_3   3   2     2
-#&gt; 75  11_4   1   3     3
-#&gt; 76  13_5   3   5     5
-#&gt; 77  12_4   2   3     3
-#&gt; 78  14_3   4   2     2
-#&gt; 79  13_5   3   5     5
-#&gt; 80  11_3   1   2     2
-#&gt; 81  11_5   1   4     4
-#&gt; 82  14_4   4   3     3
-#&gt; 83  12_H   2   H     6
-#&gt; 84  15_3   5   2     2
-#&gt; 85  13_4   3   3     3
-#&gt; 86  13_3   3   2     2
-#&gt; 87  13_1   3   1     1
-#&gt; 88  14_2   4   1     1
-#&gt; 89  13_4   3   4     4
-#&gt; 90  12_6   2   5     5
-#&gt; 91  15_4   5   3     3
-#&gt; 92  12_3   2   2     2
-#&gt; 93  15_1   5   1     1
-#&gt; 94  14_H   4   H     6
-#&gt; 95  11_6   1   5     5
-#&gt; 96  14_3   4   2     2
-#&gt; 97  13_4   3   4     4
-#&gt; 98  13_H   3   H     6
-#&gt; 99  15_1   5   1     1
-#&gt; 100 12_4   2   4     4
-#&gt; 101 12_4   2   4     4
-#&gt; 102 15_1   5   1     1
-#&gt; 103 14_2   4   1     1
-#&gt; 104 14_6   4   5     5
-#&gt; 105 15_H   5   H     6
-#&gt; 106 15_6   5   5     5
-#&gt; 107 12_1   2   1     1
-#&gt; 108 12_4   2   3     3
-#&gt; 109 13_4   3   3     3
-#&gt; 110 12_6   2   5     5
-#&gt; 111 15_6   5   5     5
-#&gt;  [ reached 'max' / getOption("max.print") -- omitted 9 rows ]</div><div class='input'>
+<span class='va'>abr1</span><span class='op'>$</span><span class='va'>fact</span> <span class='op'>%&gt;%</span> 
+ <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;   injorder                              pathcdf filecdf name.org remark name
+#&gt; 1        1 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  01.cdf     12_2     ok 12_2
+#&gt; 2        2 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  02.cdf     13_3     ok 13_4
+#&gt; 3        3 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  03.cdf     15_4     ok 15_5
+#&gt; 4        4 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  04.cdf     12_1     ok 12_2
+#&gt; 5        5 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  05.cdf     12_2     ok 12_2
+#&gt; 6        6 C:/Xcalibur/ANDI-LTQ/050509-Abr1/cdf  06.cdf     11_1     ok 11_2
+#&gt;   rep day class
+#&gt; 1   2   2     2
+#&gt; 2   3   3     3
+#&gt; 3   5   4     4
+#&gt; 4   2   1     1
+#&gt; 5   2   2     2
+#&gt; 6   1   1     1</div><div class='input'>
 <span class='co'># check out the repartition of class</span>
 <span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>abr1</span><span class='op'>$</span><span class='va'>fact</span><span class='op'>$</span><span class='va'>class</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 

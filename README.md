@@ -2,27 +2,28 @@
 # metaboData
 
 <!-- badges: start -->
-[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![R build status](https://github.com/aberHRML/metaboData/workflows/R-CMD-check/badge.svg)](https://github.com/aberHRML/metaboData/actions)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![R-CMD-check](https://github.com/jasenfinch/metaboData/workflows/R-CMD-check/badge.svg)](https://github.com/jasenfinch/metaboData/actions)
 [![Coverage status](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://codecov.io/github/aberHRML/metaboData?branch=master)
-![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/aberHRML/metaboData/blob/master/LICENSE.md)
+[![CRAN status](https://www.r-pkg.org/badges/version/metaboData)](https://CRAN.R-project.org/package=metaboData)
+[![downloads](https://cranlogs.r-pkg.org/badges/metaboData)](https://cran.r-project.org/package=metaboData)
 <!-- badges: end -->
 
 > Example data sets for metabolomics analyses
 
 ### Installation
 
-To install directly from this repository run:
+The package can be install directly from CRAN using the following:
+
+``` rm
+install.packages('metaboData')
+```
+
+Alternatively, the development version can be installed from GitHub:
 
 ``` {r,eval=false)
 devtools::install_github('aberHRML/metaboData',build_vignettes = TRUE)
-```
-
-Or package can be installed via a [`drat`](https://eddelbuettel.github.io/drat/) repository hosted on github
-using:
-
-``` rm
-install.packages('metaboData',repos = 'https://aberhrml.github.io/drat/')
 ```
 
 ### Learn more
