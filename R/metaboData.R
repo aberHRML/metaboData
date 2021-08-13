@@ -1,2 +1,2 @@
 globalVariables(c('.','technique','data set','tag','complete','dataSetDir','internalDir',
-                  'size'))
+                  'size','file_name','status'))
