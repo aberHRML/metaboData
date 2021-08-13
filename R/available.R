@@ -1,7 +1,7 @@
 #' Available data sets
 #' @description Displays available data sets.
 #' @param dataSetDir directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the package installation location.
-#' @param internalDir Logical, are local data sets stored internal to the package location.
+#' @param internalDir stored the data set internally to the package installation location
 #' @return A tibble containing available data set information.
 #' @importFrom purrr walk map
 #' @importFrom stringr str_extract regex str_remove_all
@@ -101,7 +101,7 @@ availableDataSets <- function(dataSetDir = 'DataSets',
 #' @param technique metabolomic technique name
 #' @param dataSet data set name
 #' @param dataSetDir directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the package installation location.
-#' @param internalDir Logical, are local data sets stored internal to the package location.
+#' @param internalDir stored the data set internally to the package installation location
 #' @return A tibble containing available file information.
 #' @importFrom dplyr right_join relocate arrange
 #' @export

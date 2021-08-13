@@ -20,11 +20,11 @@ downloadDataSet(
 
 \item{dataSetDir}{directory to store local data sets. If \code{internalDir = TRUE} this is a directory relative to the library location.}
 
-\item{internalDir}{Logical, should the directory for storing local data sets be internal to the package location.}
+\item{internalDir}{stored the data set internally to the package installation location}
 
 \item{ask}{ask before downloading}
 
-\item{...}{arguments to pass to \code{piggyback::pb_download}}
+\item{...}{arguments to pass to \code{piggyback::pb_download()}}
 }
 \description{
 Download an example data set.

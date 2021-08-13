@@ -54,10 +54,12 @@ dat <- abr1$neg
 dim(dat)
 
 # names of the variables
-dimnames(dat)[[2]]
+dimnames(dat)[[2]] \%>\% 
+ head()
 
 # print out the experimental factors
-print(abr1$fact)
+abr1$fact \%>\% 
+ head()
 
 # check out the repartition of class
 table(abr1$fact$class)

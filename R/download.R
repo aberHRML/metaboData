@@ -3,9 +3,9 @@
 #' @param technique metabolomic technique name
 #' @param dataSet data set name
 #' @param dataSetDir directory to store local data sets. If \code{internalDir = TRUE} this is a directory relative to the library location.
-#' @param internalDir Logical, should the directory for storing local data sets be internal to the package location.
+#' @param internalDir stored the data set internally to the package installation location
 #' @param ask ask before downloading
-#' @param ... arguments to pass to \code{piggyback::pb_download}
+#' @param ... arguments to pass to \code{piggyback::pb_download()}
 #' @importFrom rlang is_interactive inform
 #' @importFrom dplyr group_by summarise filter
 #' @importFrom piggyback pb_download
@@ -79,9 +79,9 @@ downloadDataSet <- function(technique,
 #' @param technique metabolomic technique name
 #' @param dataSet data set name
 #' @param dataSetDir directory to store local data sets. If \code{internalDir = TRUE} this is a directory relative to the library location.
-#' @param internalDir Logical, should the directory for storing local data sets be internal to the package location.
+#' @param internalDir stored the data set internally to the package installation location
 #' @param ask ask before downloading
-#' @param ... arguments to pass to \code{piggyback::pb_download}
+#' @param ... arguments to pass to \code{piggyback::pb_download()}
 #' @export
 #' @examples
 #' \dontrun{

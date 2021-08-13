@@ -13,7 +13,7 @@ availableFiles(technique, dataSet, dataSetDir = "DataSets", internalDir = TRUE)
 
 \item{dataSetDir}{directory containing local data set store. If \code{internalDir = TRUE} the full directory path would be relative to the package installation location.}
 
-\item{internalDir}{Logical, are local data sets stored internal to the package location.}
+\item{internalDir}{stored the data set internally to the package installation location}
 }
 \value{
 A tibble containing available file information.
