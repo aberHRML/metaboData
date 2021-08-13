@@ -9,3 +9,6 @@ README*
 ^Meta$
 ^DataSets$
 ^doc$
+^_pkgdown\.yml$
+^pkgdown$
+^LICENSE\.md$
