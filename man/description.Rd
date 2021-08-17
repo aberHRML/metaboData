@@ -30,7 +30,7 @@ A list containing data set descriptors.
 Return list containing experiment description elements
 }
 \examples{
-\dontrun{
+\donttest{
 description(
    techniques()[1],
    dataSets(techniques()[1])[1])

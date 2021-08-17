@@ -24,7 +24,7 @@ A tibble containing sample information.
 Return tibble of run information for a given data set of a given metabolomics technique.
 }
 \examples{
-\dontrun{
+\donttest{
 info <- runinfo(
    techniques()[1],
    dataSets(techniques()[1])[1])

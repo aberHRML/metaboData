@@ -16,7 +16,7 @@ A character vector of available data sets.
 Return a vector of available data sets for a given metabolomic technique.
 }
 \examples{
-\dontrun{
+\donttest{
 dataSets(techniques()[1])
 }
 }

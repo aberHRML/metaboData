@@ -6,13 +6,14 @@
 #' @param internalDir stored the data set internally to the package installation location
 #' @param ask ask before downloading
 #' @param ... arguments to pass to \code{piggyback::pb_download()}
+#' 
 #' @importFrom rlang is_interactive inform
 #' @importFrom dplyr group_by summarise filter
 #' @importFrom piggyback pb_download
 #' @importFrom utils menu
 #' @export
 #' @examples 
-#' \dontrun{
+#' \donttest{
 #' downloadDataSet('FIE-HRMS','BdistachyonTechnical')
 #' }
 

@@ -11,7 +11,7 @@
 #' @importFrom dplyr bind_rows mutate select left_join distinct
 #' @export
 #' @examples 
-#' \dontrun{
+#' \donttest{
 #' availableDataSets()
 #' }
 
@@ -106,7 +106,7 @@ availableDataSets <- function(dataSetDir = 'DataSets',
 #' @importFrom dplyr right_join relocate arrange
 #' @export
 #' @examples 
-#' \dontrun{
+#' \donttest{
 #' availableFiles('FIE-HRMS','BdistachyonTechnical')
 #' }
 

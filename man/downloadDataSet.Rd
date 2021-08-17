@@ -30,7 +30,7 @@ downloadDataSet(
 Download an example data set.
 }
 \examples{
-\dontrun{
+\donttest{
 downloadDataSet('FIE-HRMS','BdistachyonTechnical')
 }
 }
