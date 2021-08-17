@@ -6,7 +6,7 @@
 #' @param internalDir stored the data set internally to the package installation location
 #' @param ask ask before downloading
 #' @param ... arguments to pass to \code{piggyback::pb_download()}
-#' 
+#' @return A list object containing the API request response results for the downloaded files.
 #' @importFrom rlang is_interactive inform
 #' @importFrom dplyr group_by summarise filter
 #' @importFrom piggyback pb_download
@@ -83,6 +83,7 @@ downloadDataSet <- function(technique,
 #' @param internalDir stored the data set internally to the package installation location
 #' @param ask ask before downloading
 #' @param ... arguments to pass to \code{piggyback::pb_download()}
+#' @return A list object containing the API request response results for the downloaded files.
 #' @export
 #' @examples
 #' \dontrun{
