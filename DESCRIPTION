@@ -2,7 +2,12 @@ Package: metaboData
 Type: Package
 Title: Example Metabolomics Data Sets
 Version: 0.6.1
-Authors@R: person("Jasen", "Finch", email = "jsf9@aber.ac.uk", role = c("aut", "cre"))
+Authors@R: c(
+    person("Jasen", "Finch", email = "jsf9@aber.ac.uk", role = c("aut", "cre")),
+    person("Manfred Beckmann", email = "meb@aber.ac.uk", role = c("ctb")),
+    person("David Enot", email = "dle@aber.ac.uk", role = c("ctb")),
+    person("Wanchang Lin", email = "wll@aber.ac.uk", role = c("ctb"))
+    )
 Description: Example metabolomics data sets from a variety of biological sample matrices, analysed using a number of mass spectrometry based metabolomic analytical techniques.
 Depends: R (>= 3.4.0)
 Imports: 
