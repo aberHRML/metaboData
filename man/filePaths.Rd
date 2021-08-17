@@ -24,7 +24,7 @@ A character vector of file paths.
 Return a vector of file paths for a given data set of a given metabolomic technique.
 }
 \examples{
-\donttest{
+\dontrun{
 files <- filePaths(
    techniques()[1],
    dataSets(techniques()[1])[1])

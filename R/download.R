@@ -13,7 +13,7 @@
 #' @importFrom utils menu
 #' @export
 #' @examples 
-#' \donttest{
+#' \dontrun{
 #' downloadDataSet('FIE-HRMS','BdistachyonTechnical')
 #' }
 

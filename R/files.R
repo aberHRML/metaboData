@@ -7,7 +7,7 @@
 #' @param  ... arguments to pass to \code{downloadDataSet()}
 #' @return A character vector of file paths.
 #' @examples 
-#' \donttest{
+#' \dontrun{
 #' files <- filePaths(
 #'    techniques()[1],
 #'    dataSets(techniques()[1])[1])
@@ -37,7 +37,7 @@ filePaths <- function(technique,
 #' @description Return a vector of available metabolomic techniques.
 #' @return A character vector of available techniques.
 #' @examples 
-#' \donttest{
+#' \dontrun{
 #' techniques()
 #' }
 #' @importFrom magrittr %>%
@@ -57,7 +57,7 @@ techniques <- function(){
 #' @param technique metabolomic technique name
 #' @return A character vector of available data sets.
 #' @examples 
-#' \donttest{
+#' \dontrun{
 #' dataSets(techniques()[1])
 #' }
 #' @importFrom tibble deframe
@@ -89,7 +89,7 @@ dataSets <- function(technique){
 #' @param  ... arguments to pass to \code{downloadDataSet()}
 #' @return A list containing data set descriptors.
 #' @examples 
-#' \donttest{
+#' \dontrun{
 #' description(
 #'    techniques()[1],
 #'    dataSets(techniques()[1])[1])

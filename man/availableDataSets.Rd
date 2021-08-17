@@ -18,7 +18,7 @@ A tibble containing available data set information.
 Displays available data sets.
 }
 \examples{
-\donttest{
+\dontrun{
 availableDataSets()
 }
 }

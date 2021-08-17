@@ -22,7 +22,7 @@ A tibble containing available file information.
 Display the available files for a given data set.
 }
 \examples{
-\donttest{
+\dontrun{
 availableFiles('FIE-HRMS','BdistachyonTechnical')
 }
 }

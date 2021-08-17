@@ -33,7 +33,7 @@ A list object containing the API request response results for the downloaded fil
 Download an example data set.
 }
 \examples{
-\donttest{
+\dontrun{
 downloadDataSet('FIE-HRMS','BdistachyonTechnical')
 }
 }

@@ -7,7 +7,7 @@
 #' @param  ... arguments to pass to \code{downloadDataSet()}
 #' @return A tibble containing sample information.
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' info <- runinfo(
 #'    techniques()[1],
 #'    dataSets(techniques()[1])[1])

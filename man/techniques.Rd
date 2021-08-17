@@ -13,7 +13,7 @@ A character vector of available techniques.
 Return a vector of available metabolomic techniques.
 }
 \examples{
-\donttest{
+\dontrun{
 techniques()
 }
 }
