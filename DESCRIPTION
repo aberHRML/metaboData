@@ -3,7 +3,7 @@ Type: Package
 Title: Example Metabolomics Data Sets
 Version: 0.6.1
 Authors@R: person("Jasen", "Finch", email = "jsf9@aber.ac.uk", role = c("aut", "cre"))
-Description: Example metabolomics data sets from a variety of biological sample matrices, analysed using a number of mass spectrometrty based metabolomic analytical techniques.
+Description: Example metabolomics data sets from a variety of biological sample matrices, analysed using a number of mass spectrometry based metabolomic analytical techniques.
 Depends: R (>= 3.4.0)
 Imports: 
     dplyr,
