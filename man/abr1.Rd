@@ -66,6 +66,7 @@ table(abr1$fact$class)
 
 }
 \author{
-Manfred Beckmann
+Manfred Beckmann, David Enot and Wanchang Lin \email{meb,dle,
+wll@aber.ac.uk}
 }
 \keyword{datasets}
