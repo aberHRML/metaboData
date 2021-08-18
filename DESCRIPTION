@@ -8,14 +8,14 @@ Authors@R: c(
         role = c("aut", "cre"),
         comment = c(ORCID = "0000-0002-6070-7476")
     ),
-    person("Manfred Beckmann", 
+    person("Manfred", "Beckmann", 
         email = "meb@aber.ac.uk", 
         role = c("ctb")
     ),
-    person("David Enot",
+    person("David", "Enot",
         role = c("ctb")
     ),
-    person("Wanchang Lin", 
+    person("Wanchang", "Lin", 
         role = c("ctb")
     )
     )
