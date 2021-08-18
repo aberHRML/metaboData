@@ -23,7 +23,7 @@ Description: Example metabolomics data sets from a variety of biological sample 
     analysed using a number of mass spectrometry based metabolomic analytical techniques.
     The example data sets are stored remotely using GitHub releases 
     <https://github.com/aberHRML/metaboData/releases> which can be accessed from R using the package.
-    The package also includes the abr1 FIE-MS data set from the FIEmspro package <https://users.aber.ac.uk/jhd/> <doi:10.1038/nprot.2007.511>.
+    The package also includes the 'abr1' FIE-MS data set from the FIEmspro package <https://users.aber.ac.uk/jhd/> <doi:10.1038/nprot.2007.511>.
 Depends: R (>= 3.4.0)
 Imports: 
     dplyr,
