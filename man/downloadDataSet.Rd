@@ -26,6 +26,9 @@ downloadDataSet(
 
 \item{...}{arguments to pass to \code{piggyback::pb_download()}}
 }
+\value{
+A list object containing the API request response results for the downloaded files.
+}
 \description{
 Download an example data set.
 }

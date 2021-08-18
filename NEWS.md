@@ -1,3 +1,9 @@
+# metaboData 0.6.1
+
+* Added Manfred Beckmann, David Enot and Wanchang Lin as package contributors.
+
+* Added return values to the documentation of [`metaboData::downloadFiles()`](https://aberhrml.github.io/metaboData/reference/downloadFiles.html) and [`metaboData::downloadDataSet()`](https://aberhrml.github.io/metaboData/reference/downloadDataSet.html).
+
 # metaboData 0.6.0
 
 * Fix error caused when destination directory for data downloads does not exist.
