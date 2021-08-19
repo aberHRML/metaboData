@@ -1,3 +1,7 @@
+# metaboData 0.6.2
+
+* Fixes to the package description for CRAN submission.
+
 # metaboData 0.6.1
 
 * Added Manfred Beckmann, David Enot and Wanchang Lin as package contributors.
