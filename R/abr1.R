@@ -32,8 +32,7 @@
 #' containing experimental meta-data.} \item{pos}{A data frame for positive
 #' data with 120 observations and 2000 variables.} \item{neg}{A data frame for
 #' negative data with 120 observations and 2000 variables.}
-#' @author Manfred Beckmann, David Enot and Wanchang Lin \email{meb,dle,
-#' wll@@aber.ac.uk}
+#' @author Manfred Beckmann, David Enot and Wanchang Lin
 #' @keywords datasets
 #' @examples
 #' 
