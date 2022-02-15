@@ -1,3 +1,7 @@
+# metaboData 0.6.3
+
+* Removed malformed email addresses from the [`abr1`](https://aberhrml.github.io/metaboData/reference/abr1.html) data set documentation.
+
 # metaboData 0.6.2
 
 * Fixes to the package description for CRAN submission.

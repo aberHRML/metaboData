@@ -1,1 +1,4 @@
-url: https://aberHRML.github.io/metaboData/
+url: https://aberhrml.github.io/metaboData/
+template:
+  bootstrap: 5
+
