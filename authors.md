@@ -14,7 +14,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/aberHRML/metaboData/blob/master/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/aberHRML/metaboData/blob/v0.6.4/DESCRIPTION)
 
 Finch J (2026). *metaboData: Example Metabolomics Data Sets*. R package
 version 0.6.4, <https://aberhrml.github.io/metaboData/>.
