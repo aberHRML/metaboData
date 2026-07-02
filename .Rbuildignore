@@ -12,3 +12,8 @@ README*
 ^_pkgdown\.yml$
 ^pkgdown$
 ^LICENSE\.md$
+^flake\.nix$
+^flake\.lock$
+^\.direnv$
+^\.envrc$
+^justfile$
