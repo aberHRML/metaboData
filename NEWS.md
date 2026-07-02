@@ -1,3 +1,11 @@
+# metaboData 0.6.4
+
+* Added documentation header for re-exported functions
+
+* Updated Roxygen version
+
+* Updated author details
+
 # metaboData 0.6.3
 
 * Removed malformed email addresses from the [`abr1`](https://aberhrml.github.io/metaboData/reference/abr1.html) data set documentation.
