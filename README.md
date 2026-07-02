@@ -3,12 +3,12 @@
 
 <!-- badges: start -->
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R-CMD-check](https://github.com/aberHRML/metaboData/workflows/R-CMD-check/badge.svg)](https://github.com/aberHRML/metaboData/actions)
-[![Codecov test coverage](https://codecov.io/gh/aberHRML/metaboData/branch/master/graph/badge.svg)](https://app.codecov.io/gh/aberHRML/metaboData?branch=master)
+[![R-CMD-check](https://github.com/aberHRML/metaboData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/aberHRML/metaboData/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/aberHRML/metaboData/graph/badge.svg)](https://app.codecov.io/gh/aberHRML/metaboData)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/aberHRML/metaboData/blob/master/LICENSE.md)
 [![CRAN status](https://www.r-pkg.org/badges/version/metaboData)](https://CRAN.R-project.org/package=metaboData)
 [![downloads](https://cranlogs.r-pkg.org/badges/metaboData)](https://cran.r-project.org/package=metaboData)
-[![DOI](https://zenodo.org/badge/93455339.svg)](https://zenodo.org/badge/latestdoi/93455339)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6096995.svg)](https://doi.org/10.5281/zenodo.6096995)
 <!-- badges: end -->
 
 > Example data sets for metabolomics analyses
