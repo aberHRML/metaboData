@@ -1,0 +1,92 @@
+# metaboData
+
+metaboData provides raw and processed example metabolomics data sets.
+This document concisely outlines how to access the data sets and the
+meta information provided.
+
+## Accessing data sets
+
+Load the library:
+
+``` r
+
+library(metaboData)
+```
+
+The example data sets are stored remotely in the releases of the GitHub
+[repository](https://github.com/aberHRML/metaboData/releases) and
+accessed using the [piggyback](https://docs.ropensci.org/piggyback/)
+package. The available data sets can be viewed using:
+
+``` r
+
+availableDataSets()
+```
+
+The available metabolomic techniques can be returned using:
+
+``` r
+
+techniques()
+```
+
+The available data sets for a given metabolomic technique can be
+returned using:
+
+``` r
+
+dataSets(techniques()[1])
+```
+
+A particular data set can be downloaded for use with:
+
+``` r
+
+downloadDataSet(techniques()[1],
+                dataSets()[1])
+```
+
+By default these will be stored within the library location. This
+behaviour can be adjusted using the `dataSetDir` and `internalDir`
+arguments.
+
+File paths for data files within a given data set can be returned using
+the following:
+
+``` r
+
+files <- filePaths(
+    techniques()[1],
+    dataSets(techniques()[1])[1])
+```
+
+An experimental description can be retrieved for a given experiment of a
+given metabolomic technique using:
+
+``` r
+
+experimentDescription <- description(
+   techniques()[1],
+   dataSets(techniques()[1])[1])
+```
+
+Run information can be retrieved for a given experiment of a given
+metabolomic technique using:
+
+``` r
+
+info <- runinfo(
+    techniques()[1],
+    dataSets(techniques()[1])[1])
+
+head(info)
+```
+
+For `filePaths`, `description` and `runinfo`, if the specified data set
+is not available locally, by default the user will be prompted to
+consent to downloading the data. The `ask = FALSE` argument can be used
+to override this behaviour.
+
+The `abr1` FIE-MS data set from the
+[FIEmspro](https://github.com/aberHRML/FIEmspro) package is also
+available via lazy-load.
