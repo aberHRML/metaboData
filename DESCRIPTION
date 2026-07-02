@@ -39,7 +39,7 @@ Imports:
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.2
+RoxygenNote: 8.0.0
 Suggests: 
     testthat,
     covr,
