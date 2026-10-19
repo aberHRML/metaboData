@@ -2,6 +2,8 @@
 
 ## metaboData 0.6.4
 
+CRAN release: 2026-07-02
+
 - Added documentation header for re-exported functions
 
 - Updated Roxygen version
